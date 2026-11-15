@@ -428,7 +428,7 @@
               <span class="block text-[10px] font-medium text-slate-500 dark:text-slate-400">Scholar &amp; Index Profiles</span>
             </button>
             <button type="button" onclick="navigateToSection('collaborators')" class="p-2 rounded-xl bg-white/80 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/70 text-center hover:border-blue-500 transition-colors">
-              <span class="block text-sm font-extrabold text-blue-600 dark:text-sky-400">9</span>
+              <span class="block text-sm font-extrabold text-blue-600 dark:text-sky-400">6</span>
               <span class="block text-[10px] font-medium text-slate-500 dark:text-slate-400">Research Collaborators</span>
             </button>
           </div>
@@ -1684,13 +1684,13 @@
 
         <div class="flex flex-wrap items-center gap-2">
           <button type="button" onclick="filterCollaborators('all')" data-collab-filter="all" class="collab-filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all">
-            All (9)
+            All (6)
           </button>
           <button type="button" onclick="filterCollaborators('current')" data-collab-filter="current" class="collab-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
-            Current Collaborators (1)
+            Current Collaborators (2)
           </button>
           <button type="button" onclick="filterCollaborators('previous')" data-collab-filter="previous" class="collab-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
-            Previous Collaborators (8)
+            Previous Collaborators (4)
           </button>
         </div>
       </div>
@@ -2294,57 +2294,45 @@
     const COLLABORATORS_DATA = [
       {
         name: 'Professor Zahra Moussavi',
-        role: 'My Ph.D. Supervisor',
+        role: 'My Ph.D. Supervisor • University of Manitoba',
         status: 'current',
-        statusLabel: 'Current Collaborator'
+        statusLabel: 'Current Collaborator',
+        url: 'https://scholar.google.com/citations?user=YeEyzMYAAAAJ&hl=en'
       },
       {
-        name: 'Isam Abu-Qasmieh, Ph.D.',
-        role: 'Research Collaborator',
-        status: 'previous',
-        statusLabel: 'Previous Collaborator'
-      },
-      {
-        name: 'Hiam Alquraan, PhD',
-        role: 'Research Collaborator',
-        status: 'previous',
-        statusLabel: 'Previous Collaborator'
+        name: 'Ausilah Alfraihat, Ph.D.',
+        role: 'Assistant Professor of Biomedical Engineering, The Hashemite University (Ph.D., Drexel University) • Biomedical Signal & Image Processing',
+        status: 'current',
+        statusLabel: 'Current Collaborator',
+        url: 'https://scholar.google.com/citations?user=kg4WqwQAAAAJ&hl=en'
       },
       {
         name: 'Amin Alqudah, PhD',
         role: 'Research Collaborator',
         status: 'previous',
-        statusLabel: 'Previous Collaborator'
-      },
-      {
-        name: 'Ihssan S. Massad, PhD',
-        role: 'Research Collaborator',
-        status: 'previous',
-        statusLabel: 'Previous Collaborator'
-      },
-      {
-        name: 'Khaled Alawneh, MD',
-        role: 'Clinical & Research Collaborator',
-        status: 'previous',
-        statusLabel: 'Previous Collaborator'
+        statusLabel: 'Previous Collaborator',
+        url: ''
       },
       {
         name: 'Yusra Obeidat, PhD',
         role: 'Research Collaborator',
         status: 'previous',
-        statusLabel: 'Previous Collaborator'
+        statusLabel: 'Previous Collaborator',
+        url: ''
       },
       {
         name: 'Abedalgany A. Athamneh, PhD',
         role: 'Research Collaborator',
         status: 'previous',
-        statusLabel: 'Previous Collaborator'
+        statusLabel: 'Previous Collaborator',
+        url: ''
       },
       {
         name: 'Shoroq Qazan, MSc',
         role: 'Research Collaborator',
         status: 'previous',
-        statusLabel: 'Previous Collaborator'
+        statusLabel: 'Previous Collaborator',
+        url: ''
       }
     ];
 
@@ -2869,15 +2857,20 @@
               <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${isCurrent ? 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-sky-300' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}">
                 ${person.statusLabel}
               </span>
-              <h3 class="font-academic font-bold text-slate-900 dark:text-white text-sm sm:text-base pt-1">${person.name}</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400">${person.role}</p>
+              <h3 class="font-academic font-bold text-slate-900 dark:text-white text-sm sm:text-base pt-1">
+                ${person.url ? `<a href="${person.url}" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors inline-flex items-center gap-1.5"><span>${person.name}</span><i data-lucide="external-link" class="w-3.5 h-3.5 text-sky-500"></i></a>` : person.name}
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${person.role}</p>
             </div>
-            <div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 font-bold text-xs shrink-0">
+            <div class="w-10 h-10 rounded-full bg-sky-50 dark:bg-slate-800 border border-sky-200/70 dark:border-slate-700 flex items-center justify-center text-blue-700 dark:text-sky-300 font-bold text-xs shrink-0">
               ${person.name.replace(/Professor |,.*$/g, '').split(' ').map(n => n[0]).slice(0, 2).join('')}
             </div>
           </div>
         `;
       }).join('');
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
     }
 
     function filterCollaborators(filterType) {
