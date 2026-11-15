@@ -1,1 +1,2004 @@
-# aliqudah.github.io
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Mohammad Alqudah, Ph.D. | Biomedical Engineering &amp; Healthcare AI</title>
+  <meta name="description" content="Official academic &amp; research portfolio of Ali Mohammad Alqudah, Ph.D. in Biomedical Engineering at the University of Manitoba, Founder &amp; CEO of Lucidya Tech." />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          colors: {
+            brand: {
+              50: '#eef9ff',
+              100: '#dcf3ff',
+              200: '#b2e8ff',
+              300: '#6dd7ff',
+              400: '#20c0ff',
+              500: '#00a3f5',
+              600: '#0082d4',
+              700: '#0068ab',
+              800: '#04588d',
+              900: '#0a4974',
+              950: '#072e4d'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    h1, h2, h3, .font-display {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+    .glass-nav {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .hero-mesh {
+      background-image:
+        radial-gradient(at 15% 20%, rgba(14, 165, 233, 0.14) 0px, transparent 50%),
+        radial-gradient(at 85% 15%, rgba(99, 102, 241, 0.14) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(16, 185, 129, 0.10) 0px, transparent 50%);
+    }
+    .dark .hero-mesh {
+      background-image:
+        radial-gradient(at 15% 20%, rgba(14, 165, 233, 0.22) 0px, transparent 55%),
+        radial-gradient(at 85% 15%, rgba(99, 102, 241, 0.22) 0px, transparent 55%),
+        radial-gradient(at 50% 85%, rgba(16, 185, 129, 0.15) 0px, transparent 55%);
+    }
+    .section-hidden {
+      display: none !important;
+    }
+    .leaflet-container {
+      font-family: 'Inter', sans-serif;
+      z-index: 10;
+    }
+    @keyframes pulseSlow {
+      0%, 100% { opacity: 0.55; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.03); }
+    }
+    .animate-pulse-slow {
+      animation: pulseSlow 5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-sky-500 selection:text-white transition-colors duration-300">
+
+  <!-- Top Utility Banner / Quick Links -->
+  <div class="bg-slate-900 text-slate-300 text-xs border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="inline-flex items-center gap-1.5 text-sky-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          Biomedical Instrumentation &amp; Signal Analysis Lab &bull; University of Manitoba
+        </span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:inline text-slate-400">Winnipeg, Manitoba, Canada</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/aliqudah" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors inline-flex items-center gap-1">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          <span>github.com/aliqudah</span>
+        </a>
+        <a href="https://alialqudah.github.io/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors inline-flex items-center gap-1">
+          <i data-lucide="layout-template" class="w-3.5 h-3.5"></i>
+          <span>alialqudah.github.io</span>
+        </a>
+        <a href="https://www.alialqudah.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors inline-flex items-center gap-1">
+          <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+          <span>alialqudah.com</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=YeEyzMYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors inline-flex items-center gap-1">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+          <span>Google Scholar</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Header Navigation (Matches all 13 sections of alialqudah.com) -->
+  <header class="sticky top-0 z-40 glass-nav bg-white/85 dark:bg-slate-900/85 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-3">
+        <!-- Brand Logo + Name -->
+        <button type="button" onclick="navigateToSection('home')" class="flex items-center gap-3 text-left group focus:outline-none">
+          <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 via-indigo-500 to-emerald-500 p-0.5 shadow-md group-hover:shadow-sky-500/25 transition-all">
+            <div class="w-full h-full bg-white dark:bg-slate-900 rounded-[10px] flex items-center justify-center overflow-hidden">
+              <img
+                src="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQdUUFBOGEZK2okqsej3nF0wqthP9aCJxltGhmz6JwyEqZ5aFWUTdqHdiFEtKmlQGe8hAlSM5UcBdFoe1WqZT9ZUzgv1JteLlPuXjyvVnlF55TKKFfqSx0tswxT6tU6zFUqSL5BJclogH45qSIktUvsynkf39zYKj2ELmlDLerFXMF8zX0ZzeFrPB_cuMVY=w16383"
+                alt="Brain AI Logo"
+                class="w-7 h-7 object-contain"
+                onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+              />
+              <i data-lucide="brain-circuit" class="w-5 h-5 text-sky-500 hidden"></i>
+            </div>
+          </div>
+          <div>
+            <span class="block font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white tracking-tight group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+              Ali Mohammad Alqudah, Ph.D.
+            </span>
+            <span class="block text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+              Biomedical Engineering &bull; Healthcare AI
+            </span>
+          </div>
+        </button>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-1" aria-label="Main Navigation">
+          <button type="button" onclick="navigateToSection('home')" data-nav="home" class="nav-pill px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/60">Home</button>
+          <button type="button" onclick="navigateToSection('biography')" data-nav="biography" class="nav-pill px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Biography</button>
+          <button type="button" onclick="navigateToSection('cv')" data-nav="cv" class="nav-pill px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">CV</button>
+          <button type="button" onclick="navigateToSection('education')" data-nav="education" class="nav-pill px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Education</button>
+          <button type="button" onclick="navigateToSection('experience')" data-nav="experience" class="nav-pill px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Experience</button>
+          <button type="button" onclick="navigateToSection('lucidya-tech')" data-nav="lucidya-tech" class="nav-pill px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Lucidya Tech</button>
+          <button type="button" onclick="navigateToSection('skills')" data-nav="skills" class="nav-pill px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Skills</button>
+          <button type="button" onclick="navigateToSection('publications')" data-nav="publications" class="nav-pill px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Publications</button>
+          <button type="button" onclick="navigateToSection('data')" data-nav="data" class="nav-pill px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Data</button>
+
+          <!-- "More" Dropdown matching alialqudah.com structure -->
+          <div class="relative" id="moreDropdownContainer">
+            <button type="button" onclick="toggleMoreDropdown()" id="moreDropdownBtn" class="px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all inline-flex items-center gap-1">
+              <span>More</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+            </button>
+            <div id="moreDropdownMenu" class="hidden absolute right-0 mt-2 w-48 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-slate-200 dark:border-slate-800 py-1.5 z-50">
+              <button type="button" onclick="navigateToSection('academic-projects'); closeMoreDropdown();" data-nav="academic-projects" class="nav-pill w-full text-left px-3.5 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2">
+                <i data-lucide="microscope" class="w-3.5 h-3.5 text-sky-500"></i>
+                <span>Research Projects</span>
+              </button>
+              <button type="button" onclick="navigateToSection('collaborators'); closeMoreDropdown();" data-nav="collaborators" class="nav-pill w-full text-left px-3.5 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2">
+                <i data-lucide="users" class="w-3.5 h-3.5 text-indigo-500"></i>
+                <span>Collaborators</span>
+              </button>
+              <button type="button" onclick="navigateToSection('news'); closeMoreDropdown();" data-nav="news" class="nav-pill w-full text-left px-3.5 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2">
+                <i data-lucide="newspaper" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>News</span>
+              </button>
+              <button type="button" onclick="navigateToSection('contact'); closeMoreDropdown();" data-nav="contact" class="nav-pill w-full text-left px-3.5 py-2 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2">
+                <i data-lucide="mail" class="w-3.5 h-3.5 text-amber-500"></i>
+                <span>Contact</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Action Controls: Search, Layout Mode Switcher, Theme Toggle, Mobile Menu -->
+        <div class="flex items-center gap-2">
+          <!-- Quick Search Button -->
+          <button
+            type="button"
+            onclick="openSearchModal()"
+            class="px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors inline-flex items-center gap-1.5"
+            title="Search across site content"
+          >
+            <i data-lucide="search" class="w-3.5 h-3.5"></i>
+            <span class="hidden sm:inline">Search</span>
+          </button>
+
+          <!-- Layout Mode Toggle: Scroll All vs. Multi-Page Tab Mode -->
+          <button
+            type="button"
+            id="viewModeToggleBtn"
+            onclick="toggleViewMode()"
+            class="px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors inline-flex items-center gap-1.5"
+            title="Switch between Unified Scroll View and Multi-Page Tab View"
+          >
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-sky-500"></i>
+            <span id="viewModeLabel" class="hidden md:inline">Mode: Scroll All</span>
+          </button>
+
+          <!-- Dark/Light Theme Toggle -->
+          <button
+            type="button"
+            onclick="toggleTheme()"
+            id="themeToggleBtn"
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            aria-label="Toggle color theme"
+            title="Toggle Dark / Light Mode"
+          >
+            <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+            <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
+          </button>
+
+          <!-- Mobile Navigation Drawer Button -->
+          <button
+            type="button"
+            onclick="toggleMobileMenu()"
+            class="xl:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
+            aria-label="Open navigation menu"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobileNavDrawer" class="hidden xl:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+        <button type="button" onclick="navigateToSection('home'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Home</button>
+        <button type="button" onclick="navigateToSection('biography'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Biography</button>
+        <button type="button" onclick="navigateToSection('cv'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">CV</button>
+        <button type="button" onclick="navigateToSection('education'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Education</button>
+        <button type="button" onclick="navigateToSection('experience'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Experience</button>
+        <button type="button" onclick="navigateToSection('lucidya-tech'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Lucidya Tech</button>
+        <button type="button" onclick="navigateToSection('skills'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Skills</button>
+        <button type="button" onclick="navigateToSection('publications'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Publications</button>
+        <button type="button" onclick="navigateToSection('data'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Data</button>
+        <button type="button" onclick="navigateToSection('academic-projects'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Research Projects</button>
+        <button type="button" onclick="navigateToSection('collaborators'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Collaborators</button>
+        <button type="button" onclick="navigateToSection('news'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">News</button>
+        <button type="button" onclick="navigateToSection('contact'); closeMobileMenu();" class="px-3 py-2 rounded-lg text-xs font-medium text-left hover:bg-slate-100 dark:hover:bg-slate-800">Contact</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Active Tab Mode Banner (Visible when user switches to Page-by-Page Tab View) -->
+  <div id="tabModeBanner" class="hidden bg-sky-50 dark:bg-sky-950/50 border-b border-sky-200 dark:border-sky-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 text-sky-800 dark:text-sky-300">
+        <i data-lucide="layout-panel-top" class="w-4 h-4"></i>
+        <span>Viewing single page section (<strong id="activeTabName">Home</strong>) — matching original multi-page navigation.</span>
+      </div>
+      <button type="button" onclick="toggleViewMode()" class="font-semibold text-sky-600 dark:text-sky-400 hover:underline">
+        Show All Sections Together &rarr;
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-16">
+
+    <!-- ==========================================
+         1. HOME SECTION (https://www.alialqudah.com/)
+         ========================================== -->
+    <section id="home" data-section="home" class="site-section relative rounded-3xl hero-mesh border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/70 p-6 sm:p-10 lg:p-12 shadow-sm overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Left Column: Identity, Affiliation, Emails, Brain AI Graphic & CTAs -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-700 dark:text-sky-300 text-xs font-semibold">
+            <i data-lucide="Cpu" class="w-3.5 h-3.5"></i>
+            <span>Biomedical Signal Processing &bull; Machine &amp; Deep Learning</span>
+          </div>
+
+          <div class="space-y-3">
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+              Ali Mohammad Alqudah, <span class="bg-gradient-to-r from-sky-500 via-indigo-500 to-emerald-500 bg-clip-text text-transparent">Ph.D.</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-semibold text-slate-700 dark:text-slate-200">
+              Ph.D. In Biomedical Engineering, University of Manitoba
+            </p>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+              Advancing healthcare solutions through artificial intelligence, biomedical signal &amp; image processing, and clinical decision-support technologies at the Biomedical Instrumentation and Signal Analysis Lab, and Founder &amp; CEO of <button type="button" onclick="navigateToSection('lucidya-tech')" class="text-sky-600 dark:text-sky-400 font-semibold hover:underline">Lucidya Tech</button>.
+            </p>
+          </div>
+
+          <!-- Interactive Email Chips (Verbatim emails from Home page) -->
+          <div class="space-y-2 pt-1">
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+              Direct Email Contact
+            </div>
+            <div class="flex flex-wrap items-center gap-2.5">
+              <div class="inline-flex items-center rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 p-1 pl-3 gap-2">
+                <i data-lucide="mail" class="w-4 h-4 text-sky-500"></i>
+                <a href="mailto:ali_qudah@hotmail.com" class="text-xs sm:text-sm font-mono text-slate-800 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400">
+                  ali_qudah@hotmail.com
+                </a>
+                <button
+                  type="button"
+                  onclick="copyText('ali_qudah@hotmail.com', 'Copied ali_qudah@hotmail.com')"
+                  class="p-1.5 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors"
+                  title="Copy email address"
+                >
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+
+              <div class="inline-flex items-center rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 p-1 pl-3 gap-2">
+                <i data-lucide="graduation-cap" class="w-4 h-4 text-indigo-500"></i>
+                <a href="mailto:alqudaha@myumanitoba.ca" class="text-xs sm:text-sm font-mono text-slate-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400">
+                  alqudaha@myumanitoba.ca
+                </a>
+                <button
+                  type="button"
+                  onclick="copyText('alqudaha@myumanitoba.ca', 'Copied alqudaha@myumanitoba.ca')"
+                  class="p-1.5 rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors"
+                  title="Copy university email address"
+                >
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a
+              href="https://drive.google.com/file/d/1s7oY8o94VE5INqWERafPPGAe0vr7zMHw/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm shadow-lg shadow-sky-600/20 transition-all"
+            >
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span>Download Latest CV (Oct 2026)</span>
+            </a>
+            <button
+              type="button"
+              onclick="navigateToSection('publications')"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:opacity-90 font-semibold text-sm transition-all"
+            >
+              <i data-lucide="book-open" class="w-4 h-4"></i>
+              <span>Publications &amp; Profiles</span>
+            </button>
+            <a
+              href="https://github.com/aliqudah"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-sky-500 font-semibold text-sm transition-all"
+            >
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>GitHub (@aliqudah)</span>
+            </a>
+          </div>
+
+          <!-- Brain/AI Illustration Card from Homepage -->
+          <div class="pt-2">
+            <div class="flex items-center gap-4 p-3.5 rounded-2xl bg-white/80 dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 shadow-sm max-w-xl">
+              <img
+                src="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQfXFLt4qAkPxz_NoaU0jfeBu8ZJu6OIpz6c1ZdirDJZMZ5u2kvTgSfHdqWWPN5gWISV_l3SUF_ExcD2cPb9J_HhntPVsjV2Dz3JhOCh97uxlwdRbC4dl7WYj0zpHFl4iTkUnZ50pl3EPuVi5N2CDTI-vlXf_F9wUcBpPkQ3N5rKC4Zm7igWvT3_Q1EPOPcbWQghEwYg8Swwzc7viBG8sYMpA84WYoVv6o-Cp_Ze=w1280"
+                alt="Biomedical AI and Brain Signal Analysis Illustration"
+                class="w-20 h-14 object-cover rounded-xl border border-slate-200 dark:border-slate-700 shrink-0"
+                onerror="this.style.display='none';"
+              />
+              <div class="text-xs text-slate-600 dark:text-slate-400">
+                <span class="font-semibold text-slate-900 dark:text-slate-200 block">Advancing AI in Healthcare</span>
+                Developing intelligent diagnostic systems for Obstructive Sleep Apnea (OSA), physiological signal modeling, and medical imaging.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Portrait Photograph & Quick Academic Metrics -->
+        <div class="lg:col-span-5 flex flex-col items-center">
+          <div class="relative group w-64 sm:w-80">
+            <div class="absolute -inset-1.5 bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-500 rounded-3xl blur-md opacity-40 group-hover:opacity-65 transition duration-500"></div>
+            <div class="relative rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 border-2 border-white dark:border-slate-700 shadow-2xl aspect-[4/5] flex items-center justify-center">
+              <img
+                src="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQfYxoLfDn38oVPbsWCoKJfoVXH9Z-tu7Mtjxxd3NyWPrWwywfiM3544f9j1OQYFdgcVhqYgGyWt8LFkcJvr40Zaf7iwD3OoANeF2LUuKLoadGQSJ-jqtgQwxuJQ4wLDsiYRSyLnjxfuhLadTC8WYjB_9YJcAiZUbe6mHqZs77WYhjh1bVuVF32yTttRayhYIevmN1hYUepPrk_egY9z-lAW9mAzKBF8LjbTnbExw1k=w1280"
+                alt="Ali Mohammad Alqudah, Ph.D."
+                class="w-full h-full object-cover object-top"
+                onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/40128614?v=4';"
+              />
+            </div>
+          </div>
+
+          <!-- Highlight Badges Under Portrait -->
+          <div class="grid grid-cols-3 gap-2.5 w-full max-w-sm mt-5">
+            <button type="button" onclick="navigateToSection('education')" class="p-3 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 text-center hover:border-sky-500 transition-colors">
+              <span class="block text-lg font-extrabold text-sky-600 dark:text-sky-400">3</span>
+              <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400">Degrees (Ph.D., M.Sc., B.S.E.)</span>
+            </button>
+            <button type="button" onclick="navigateToSection('publications')" class="p-3 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 text-center hover:border-indigo-500 transition-colors">
+              <span class="block text-lg font-extrabold text-indigo-600 dark:text-indigo-400">7+</span>
+              <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400">Scholar &amp; Index Profiles</span>
+            </button>
+            <button type="button" onclick="navigateToSection('collaborators')" class="p-3 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 text-center hover:border-emerald-500 transition-colors">
+              <span class="block text-lg font-extrabold text-emerald-600 dark:text-emerald-400">9</span>
+              <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400">Research Collaborators</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         2. BIOGRAPHY SECTION (https://www.alialqudah.com/biography)
+         ========================================== -->
+    <section id="biography" data-section="biography" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Academic Background &amp; Service</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Biography</h2>
+        </div>
+        <a href="https://www.alialqudah.com/biography" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 hover:text-sky-500 inline-flex items-center gap-1">
+          <span>Source: alialqudah.com/biography</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Main Biography Narrative -->
+        <div class="lg:col-span-7 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+          <p>
+            <strong class="text-slate-900 dark:text-white">Ali Mohammad Alqudah, Ph.D.</strong>, in Biomedical Engineering, University of Manitoba, Canada. His research focuses on advancing healthcare solutions through artificial intelligence, particularly in biomedical signal processing and clinical applications. His current work involves developing novel methods for detecting <strong class="text-slate-900 dark:text-white">Obstructive Sleep Apnea (OSA)</strong> during wakefulness using tracheal breathing sounds, leveraging machine learning and deep learning techniques at the <strong class="text-slate-900 dark:text-white">Biomedical Instrumentation and Signal Analysis Lab</strong>.
+          </p>
+          <p>
+            He holds a <strong class="text-slate-900 dark:text-white">B.S.E. in Biomedical Systems Engineering (2015)</strong> and an <strong class="text-slate-900 dark:text-white">M.Sc. in Computer Engineering (Industrial Automation Engineering, 2018)</strong> from Yarmouk University, Irbid, Jordan. Prior to joining the University of Manitoba, he served as a Lab Engineer, Teaching &amp; Research Assistant, and Lecturer in the Department of Biomedical Systems and Informatics Engineering at Yarmouk University from 2015 to 2022.
+          </p>
+          <p>
+            Committed to driving innovation at the intersection of engineering and medicine, his work aims to develop advanced, AI-driven technologies to improve diagnostic accuracy and patient outcomes.
+          </p>
+
+          <!-- Research Interests Pills -->
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
+              His Research Interests Span
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200/70 dark:border-sky-800/70 text-xs sm:text-sm font-semibold">
+                <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+                Artificial intelligence in healthcare
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/70 dark:border-indigo-800/70 text-xs sm:text-sm font-semibold">
+                <i data-lucide="scan-search" class="w-4 h-4"></i>
+                Pattern recognition
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200/70 dark:border-emerald-800/70 text-xs sm:text-sm font-semibold">
+                <i data-lucide="activity" class="w-4 h-4"></i>
+                Biomedical signal and image processing
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Peer-Review Service & Professional Memberships -->
+        <div class="lg:col-span-5 space-y-6">
+          <!-- Peer-Reviewed Journals -->
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+            <div class="flex items-center gap-2.5 mb-3">
+              <div class="p-2 rounded-lg bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400">
+                <i data-lucide="book-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 dark:text-white text-base">Peer-Reviewed Journal Reviewer</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Active contributor to the academic community</p>
+              </div>
+            </div>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              <li class="flex items-start gap-2.5 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/60">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500 shrink-0 mt-0.5"></i>
+                <span>Medical &amp; Biological Engineering &amp; Computing</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/60">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500 shrink-0 mt-0.5"></i>
+                <span>IEEE Journal of Biomedical and Health Informatics</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/60">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500 shrink-0 mt-0.5"></i>
+                <span>IEEE Sensors Journal</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/60">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500 shrink-0 mt-0.5"></i>
+                <span>IEEE Access</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Professional Organizations -->
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+            <div class="flex items-center gap-2.5 mb-3">
+              <div class="p-2 rounded-lg bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 dark:text-white text-base">Professional Memberships</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Member of 8 international &amp; national societies</p>
+              </div>
+            </div>
+            <ul class="grid grid-cols-1 gap-1.5 text-xs text-slate-700 dark:text-slate-300">
+              <li class="flex items-center gap-2 py-1.5 px-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>
+                <span>Institute of Electrical and Electronics Engineers (IEEE)</span>
+              </li>
+              <li class="flex items-center gap-2 py-1.5 px-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>
+                <span>IEEE Engineering in Medicine and Biology Society (EMBS)</span>
+              </li>
+              <li class="flex items-center gap-2 py-1.5 px-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>
+                <span>Association for Computing Machinery (ACM)</span>
+              </li>
+              <li class="flex items-center gap-2 py-1.5 px-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>
+                <span>Jordan Engineering Association (JEA)</span>
+              </li>
+              <li class="flex items-center gap-2 py-1.5 px-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>
+                <span>Institute for Systems and Technologies of Information, Control and Communication (INSTICC)</span>
+              </li>
+              <li class="flex items-center gap-2 py-1.5 px-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>
+                <span>International Association of Engineers (IAENG)</span>
+              </li>
+              <li class="flex items-center gap-2 py-1.5 px-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>
+                <span>Canadian Medical and Biological Engineering Society (CMBES)</span>
+              </li>
+              <li class="flex items-center gap-2 py-1.5 px-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/60">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span>
+                <span>International Information and Engineering Technology Association (IIETA)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. CV SECTION (https://www.alialqudah.com/cv)
+         ========================================== -->
+    <section id="cv" data-section="cv" class="site-section scroll-mt-20">
+      <div class="rounded-3xl bg-gradient-to-r from-sky-900 via-slate-900 to-indigo-950 text-white p-6 sm:p-10 shadow-lg border border-sky-800/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-2 max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs font-semibold">
+            <i data-lucide="file-badge" class="w-3.5 h-3.5"></i>
+            <span>Curriculum Vitae &bull; Last update Oct 2026</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Curriculum Vitae (CV)</h2>
+          <p class="text-slate-300 text-sm sm:text-base">
+            The latest version of my CV can be found <a href="https://drive.google.com/file/d/1s7oY8o94VE5INqWERafPPGAe0vr7zMHw/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline font-semibold hover:text-sky-300">here</a> (Last update OCt 2026). Includes full academic record, peer-reviewed publications, teaching history, and research supervision details.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 shrink-0">
+          <a
+            href="https://drive.google.com/file/d/1s7oY8o94VE5INqWERafPPGAe0vr7zMHw/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-sky-500/25"
+          >
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+            <span>Open CV on Google Drive</span>
+          </a>
+          <button
+            type="button"
+            onclick="copyText('https://drive.google.com/file/d/1s7oY8o94VE5INqWERafPPGAe0vr7zMHw/view?usp=sharing', 'Copied CV link to clipboard')"
+            class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-all"
+          >
+            <i data-lucide="share-2" class="w-4 h-4"></i>
+            <span>Copy CV Link</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. EDUCATION SECTION (https://www.alialqudah.com/Education)
+         ========================================== -->
+    <section id="education" data-section="education" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Academic Credentials</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Education</h2>
+        </div>
+        <a href="https://www.alialqudah.com/Education" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 hover:text-sky-500 inline-flex items-center gap-1">
+          <span>Source: alialqudah.com/Education</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Ph.D. -->
+        <div class="relative bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-sky-500/60 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 text-xs font-bold">
+                January 2022 - June 2026
+              </span>
+              <i data-lucide="graduation-cap" class="w-5 h-5 text-sky-500"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">
+              PhD. in Biomedical Engineering
+            </h3>
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+              Biomedical Engineering Program, University of Manitoba, Manitoba, Canada.
+            </p>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              Focusing on Deep and Machine Learning techniques in Biomedical Engineering.
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
+            <span>Winnipeg, MB, Canada</span>
+            <span class="font-semibold text-sky-600 dark:text-sky-400">Doctoral Degree</span>
+          </div>
+        </div>
+
+        <!-- M.Sc. -->
+        <div class="relative bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-indigo-500/60 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold">
+                April 2018
+              </span>
+              <i data-lucide="cpu" class="w-5 h-5 text-indigo-500"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">
+              M.Sc. in Computer Engineering (Industrial Automation)
+            </h3>
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+              Department of Computer Engineering, Yarmouk University, Jordan.
+            </p>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 text-xs font-semibold">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Graduated with High Honors.</span>
+            </div>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
+            <span>Irbid, Jordan</span>
+            <span class="font-semibold text-indigo-600 dark:text-indigo-400">Master's Degree</span>
+          </div>
+        </div>
+
+        <!-- B.S.E. -->
+        <div class="relative bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-emerald-500/60 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                June 2015
+              </span>
+              <i data-lucide="award" class="w-5 h-5 text-emerald-500"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">
+              B.S.E. in Biomedical Systems Engineering
+            </h3>
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">
+              Department of Biomedical Systems and Informatics Engineering, Yarmouk University, Jordan.
+            </p>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 text-xs font-semibold">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Graduated with High Honors.</span>
+            </div>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
+            <span>Irbid, Jordan</span>
+            <span class="font-semibold text-emerald-600 dark:text-emerald-400">Bachelor's Degree</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. EXPERIENCE SECTION (https://www.alialqudah.com/Experience)
+         ========================================== -->
+    <section id="experience" data-section="experience" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Academic, Clinical &amp; Industry Career</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Experience</h2>
+        </div>
+
+        <!-- Interactive Experience Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-1.5" role="group" aria-label="Filter experience by organization">
+          <button type="button" onclick="filterExperience('all')" data-exp-filter="all" class="exp-filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all">
+            All Roles (6)
+          </button>
+          <button type="button" onclick="filterExperience('umanitoba')" data-exp-filter="umanitoba" class="exp-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+            University of Manitoba (1)
+          </button>
+          <button type="button" onclick="filterExperience('industry')" data-exp-filter="industry" class="exp-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+            Industry &amp; R&amp;D (2)
+          </button>
+          <button type="button" onclick="filterExperience('yarmouk')" data-exp-filter="yarmouk" class="exp-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+            Yarmouk University (3)
+          </button>
+        </div>
+      </div>
+
+      <!-- Experience Cards Container (Populated from grounded JS data) -->
+      <div id="experienceListContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- ==========================================
+         6. LUCIDYA TECH SECTION (https://www.alialqudah.com/lucidya-tech)
+         ========================================== -->
+    <section id="lucidya-tech" data-section="lucidya-tech" class="site-section scroll-mt-20">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white p-6 sm:p-10 lg:p-12 border border-indigo-500/30 shadow-xl relative overflow-hidden">
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-xs font-semibold">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Healthcare AI Startup &bull; Founded in Winnipeg, Canada</span>
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+              Lucidya Tech
+            </h2>
+            <p class="text-xs uppercase tracking-widest text-indigo-300 font-bold">
+              Founder &amp; CEO — Ali Mohammad Alqudah, Ph.D.
+            </p>
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+              Lucidya Tech is an innovative startup dedicated to developing cutting-edge artificial intelligence solutions for medical applications, with a strong focus on signal processing and embedded systems tailored for healthcare technologies. Founded in Winnipeg during my PhD studies, Lucidya Tech embodies a commitment to advancing medical technology through intelligent, data-driven solutions that improve diagnostics, monitoring, and patient outcomes.
+            </p>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              As the Founder and CEO, I lead a passionate team of experts in AI, biomedical engineering, and embedded systems, driving research and innovation to address critical challenges in modern healthcare. Our mission is to bridge the gap between technology and medicine, delivering impactful solutions that empower healthcare providers and enhance patient care.
+            </p>
+          </div>
+
+          <div class="lg:col-span-4 space-y-3">
+            <div class="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-2">
+              <div class="flex items-center gap-2 text-sky-400 font-bold text-sm">
+                <i data-lucide="activity" class="w-4 h-4"></i>
+                <span>Biomedical Signal Processing</span>
+              </div>
+              <p class="text-xs text-slate-300">Intelligent diagnostic and monitoring pipelines for respiratory, cardiac, and neurological signals.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-2">
+              <div class="flex items-center gap-2 text-indigo-400 font-bold text-sm">
+                <i data-lucide="cpu" class="w-4 h-4"></i>
+                <span>Embedded Healthcare Systems</span>
+              </div>
+              <p class="text-xs text-slate-300">Edge AI &amp; real-time hardware-software integration tailored for clinical and point-of-care devices.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-2">
+              <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span>Clinical Decision Support</span>
+              </div>
+              <p class="text-xs text-slate-300">Data-driven AI models built to empower healthcare providers and improve patient outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         7. SKILLS SECTION (https://www.alialqudah.com/skills)
+         ========================================== -->
+    <section id="skills" data-section="skills" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Technical Stack &amp; Engineering Competencies</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Skills</h2>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap items-center gap-1.5" id="skillCategoryFilters">
+          <button type="button" onclick="filterSkills('all')" data-skill-cat="all" class="skill-filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all">All Categories</button>
+          <button type="button" onclick="filterSkills('Programming')" data-skill-cat="Programming" class="skill-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">Programming</button>
+          <button type="button" onclick="filterSkills('Frameworks')" data-skill-cat="Frameworks" class="skill-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">Frameworks</button>
+          <button type="button" onclick="filterSkills('Database Management')" data-skill-cat="Database Management" class="skill-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">Database</button>
+          <button type="button" onclick="filterSkills('Design Architectures')" data-skill-cat="Design Architectures" class="skill-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">Architecture</button>
+          <button type="button" onclick="filterSkills('IDE')" data-skill-cat="IDE" class="skill-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">IDE</button>
+          <button type="button" onclick="filterSkills('Operating Systems')" data-skill-cat="Operating Systems" class="skill-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">OS</button>
+        </div>
+      </div>
+
+      <div id="skillsGridContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- ==========================================
+         8. PUBLICATIONS & ACADEMIC PROFILES SECTION (https://www.alialqudah.com/Publications)
+         ========================================== -->
+    <section id="publications" data-section="publications" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Research Output &amp; Citation Indices</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Publications</h2>
+        </div>
+        <a href="https://www.alialqudah.com/Publications" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 hover:text-sky-500 inline-flex items-center gap-1">
+          <span>Source: alialqudah.com/Publications</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+        You can find the recent publication list of my research at the following websites:
+      </p>
+
+      <!-- 7 Official Profile Links from alialqudah.com/Publications + GitHub Profile -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Google Scholar -->
+        <a
+          href="https://scholar.google.com/citations?user=YeEyzMYAAAAJ&amp;hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 shadow-sm transition-all flex flex-col justify-between"
+        >
+          <div class="flex items-center justify-between">
+            <span class="p-2.5 rounded-xl bg-sky-50 dark:bg-sky-950 text-sky-600 dark:text-sky-400">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 transition-colors"></i>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Google Scholar</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono truncate">user=YeEyzMYAAAAJ</p>
+          </div>
+        </a>
+
+        <!-- ResearchGate -->
+        <a
+          href="https://www.researchgate.net/profile/Ali_Alqudah2"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 shadow-sm transition-all flex flex-col justify-between"
+        >
+          <div class="flex items-center justify-between">
+            <span class="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400">
+              <i data-lucide="flask-conical" class="w-5 h-5"></i>
+            </span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-emerald-500 transition-colors"></i>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">ResearchGate</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono truncate">Ali_Alqudah2</p>
+          </div>
+        </a>
+
+        <!-- Scopus -->
+        <a
+          href="https://www.scopus.com/authid/detail.uri?authorId=57189294287"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 shadow-sm transition-all flex flex-col justify-between"
+        >
+          <div class="flex items-center justify-between">
+            <span class="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400">
+              <i data-lucide="book-open-check" class="w-5 h-5"></i>
+            </span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-amber-500 transition-colors"></i>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Scopus</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono truncate">Author ID: 57189294287</p>
+          </div>
+        </a>
+
+        <!-- ORCID -->
+        <a
+          href="https://orcid.org/0000-0002-5417-0043"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-lime-500 shadow-sm transition-all flex flex-col justify-between"
+        >
+          <div class="flex items-center justify-between">
+            <span class="p-2.5 rounded-xl bg-lime-50 dark:bg-lime-950 text-lime-600 dark:text-lime-400">
+              <i data-lucide="id-card" class="w-5 h-5"></i>
+            </span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-lime-500 transition-colors"></i>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">ORCID</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono truncate">0000-0002-5417-0043</p>
+          </div>
+        </a>
+
+        <!-- ResearcherID -->
+        <a
+          href="http://www.researcherid.com/ProfileView.action?returnCode=ROUTER.Unauthorized&amp;Init=Yes&amp;SrcApp=CR&amp;queryString=KG0UuZjN5Wmp2FAvz4UcpnhmhRk5hDf%252BYKs53pc2Hhc%253D"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-purple-500 shadow-sm transition-all flex flex-col justify-between"
+        >
+          <div class="flex items-center justify-between">
+            <span class="p-2.5 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400">
+              <i data-lucide="Compass" class="w-5 h-5"></i>
+            </span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-purple-500 transition-colors"></i>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">RESEARCHERID</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Web of Science Researcher Profile</p>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/alialqudah/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 shadow-sm transition-all flex flex-col justify-between"
+        >
+          <div class="flex items-center justify-between">
+            <span class="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">LinkedIn</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono truncate">in/alialqudah</p>
+          </div>
+        </a>
+
+        <!-- JOIP -->
+        <a
+          href="https://www.joip.jo/profile/100059.400.200.2999.0000-0002-5417-0043/about"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-rose-500 shadow-sm transition-all flex flex-col justify-between"
+        >
+          <div class="flex items-center justify-between">
+            <span class="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950 text-rose-600 dark:text-rose-400">
+              <i data-lucide="globe-2" class="w-5 h-5"></i>
+            </span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-rose-500 transition-colors"></i>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">JOIP (J☆IP)</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Jordan Open Innovation Platform</p>
+          </div>
+        </a>
+
+        <!-- GitHub Open-Source Repositories -->
+        <a
+          href="https://github.com/aliqudah"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-500 shadow-sm transition-all flex flex-col justify-between"
+        >
+          <div class="flex items-center justify-between">
+            <span class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors"></i>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">GitHub Repositories</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono truncate">github.com/aliqudah</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Featured Open-Source Research Code from github.com/aliqudah -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
+              <i data-lucide="git-branch" class="w-4 h-4 text-sky-500"></i>
+              <span>Featured Open-Source Research Repositories (@aliqudah)</span>
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Public codebases and peer-reviewed supplementary implementations hosted on GitHub</p>
+          </div>
+          <a href="https://github.com/aliqudah?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1">
+            <span>View All on GitHub</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <a href="https://github.com/aliqudah/CUES" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-sky-500 transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-mono font-bold text-xs text-sky-600 dark:text-sky-400">aliqudah/CUES</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-300">Python / Jupyter</span>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              Calibration, Utility, Equity, and Stability (CUES) multiplicative composite metric framework for evaluating clinical prediction models (<span class="underline">MDPI Mathematics</span>).
+            </p>
+          </a>
+
+          <a href="https://github.com/aliqudah/ALL-Subtype-CNN-Segmentation-Impact" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-500 transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-mono font-bold text-xs text-indigo-600 dark:text-indigo-400">ALL-Subtype-CNN</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-300">MATLAB R2024b</span>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              Lightweight CNN pipeline &amp; XAI analysis for Acute Lymphoblastic Leukemia (ALL) subtype classification from peripheral blood smear images (<span class="underline">MDPI Sensors</span>).
+            </p>
+          </a>
+
+          <a href="https://github.com/aliqudah/My-Projects" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 hover:border-emerald-500 transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-mono font-bold text-xs text-emerald-600 dark:text-emerald-400">My-Projects &amp; CUESSurv</span>
+              <span class="text-[11px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-300">MATLAB &amp; Python</span>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300">
+              Collection of biomedical engineering implementations, survival analysis extensions (`CUESSurv`), and `scoliosis-prediction-app`.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         9. DATA SECTION (https://www.alialqudah.com/data)
+         ========================================== -->
+    <section id="data" data-section="data" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Open-Access Biomedical Repositories</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Data</h2>
+        </div>
+        <a href="https://www.alialqudah.com/data" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 hover:text-sky-500 inline-flex items-center gap-1">
+          <span>Source: alialqudah.com/data</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Dataset 1 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between gap-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 text-xs font-semibold">
+                <i data-lucide="database" class="w-3.5 h-3.5"></i>
+                Mendeley Data &bull; v4
+              </span>
+              <span class="text-xs font-mono text-slate-400">2fxz4px6d8/4</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug">
+              Augmented COVID-19 X-ray Images Dataset
+            </h3>
+            <p class="text-xs font-mono text-slate-500 dark:text-slate-400 break-all">
+              https://data.mendeley.com/datasets/2fxz4px6d8/4
+            </p>
+          </div>
+          <div class="flex items-center gap-2 pt-2">
+            <a
+              href="https://data.mendeley.com/datasets/2fxz4px6d8/4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition-all"
+            >
+              <span>Access Dataset on Mendeley</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+            <button
+              type="button"
+              onclick="copyText('https://data.mendeley.com/datasets/2fxz4px6d8/4', 'Copied COVID-19 X-ray Dataset URL')"
+              class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors"
+              title="Copy dataset URL"
+            >
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dataset 2 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between gap-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-semibold">
+                <i data-lucide="database" class="w-3.5 h-3.5"></i>
+                Mendeley Data &bull; v1
+              </span>
+              <span class="text-xs font-mono text-slate-400">snp56ydb3j/1</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug">
+              Multiple Time and Spectral Analysis Techniques for Comparing the PhotoPlethysmography to PiezoelectricPlethysmography with Electrocardiography
+            </h3>
+            <p class="text-xs font-mono text-slate-500 dark:text-slate-400 break-all">
+              https://data.mendeley.com/datasets/snp56ydb3j/1
+            </p>
+          </div>
+          <div class="flex items-center gap-2 pt-2">
+            <a
+              href="https://data.mendeley.com/datasets/snp56ydb3j/1"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition-all"
+            >
+              <span>Access Dataset on Mendeley</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+            <button
+              type="button"
+              onclick="copyText('https://data.mendeley.com/datasets/snp56ydb3j/1', 'Copied PPG/PZP/ECG Dataset URL')"
+              class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors"
+              title="Copy dataset URL"
+            >
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         10. RESEARCH PROJECTS SECTION (https://www.alialqudah.com/academic-projects)
+         ========================================== -->
+    <section id="academic-projects" data-section="academic-projects" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Core Investigations</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Research Projects</h2>
+        </div>
+        <a href="https://www.alialqudah.com/academic-projects" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 hover:text-sky-500 inline-flex items-center gap-1">
+          <span>Source: alialqudah.com/academic-projects</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-sky-500 transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center">
+            <i data-lucide="audio-waveform" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">
+            Deep Learning Models for Obstructive Sleep Apnea (OSA) using Tracheal Sounds.
+          </h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Wakefulness tracheal breathing sound (TBS) analysis and deep/machine learning frameworks for Obstructive Sleep Apnea severity classification.
+          </p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-indigo-500 transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+            <i data-lucide="brain" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">
+            Deep Learning Models for Biomedical Classification Applications.
+          </h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Pattern recognition, explainable AI (XAI), and deep neural network architectures for automated medical image and physiological signal classification.
+          </p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-emerald-500 transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+            <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white">
+            A smart Embedded System for the Tele-Diagnosis of ECG using Raspberry Pi.
+          </h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Embedded biomedical instrumentation and remote cardiac monitoring architecture built on Raspberry Pi for real-time tele-diagnosis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         11. COLLABORATORS SECTION (https://www.alialqudah.com/collaborators)
+         ========================================== -->
+    <section id="collaborators" data-section="collaborators" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Academic Network &amp; Co-Investigators</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Collaborators</h2>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <button type="button" onclick="filterCollaborators('all')" data-collab-filter="all" class="collab-filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all">
+            All (9)
+          </button>
+          <button type="button" onclick="filterCollaborators('current')" data-collab-filter="current" class="collab-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+            Current Collaborators (1)
+          </button>
+          <button type="button" onclick="filterCollaborators('previous')" data-collab-filter="previous" class="collab-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+            Previous Collaborators (8)
+          </button>
+        </div>
+      </div>
+
+      <div id="collaboratorsGridContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- ==========================================
+         12. NEWS SECTION (https://www.alialqudah.com/news)
+         ========================================== -->
+    <section id="news" data-section="news" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Announcements &amp; Social Stream</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">News</h2>
+        </div>
+        <a href="https://www.alialqudah.com/news" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 hover:text-sky-500 inline-flex items-center gap-1">
+          <span>Source: alialqudah.com/news</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 text-xs font-semibold text-sky-600 dark:text-sky-400">
+            <i data-lucide="message-square-share" class="w-4 h-4"></i>
+            <span>Academic Updates &amp; Social Feed</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+            Tweets by amqu92
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+            Follow <span class="font-mono font-semibold text-slate-800 dark:text-slate-200">@amqu92</span> on X (formerly Twitter) for the latest updates on publications, research milestones, and healthcare AI developments.
+          </p>
+        </div>
+        <a
+          href="https://x.com/amqu92"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold text-xs sm:text-sm hover:opacity-90 transition-all shrink-0"
+        >
+          <span>Tweets by amqu92</span>
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         13. CONTACT SECTION (https://www.alialqudah.com/contact)
+         ========================================== -->
+    <section id="contact" data-section="contact" class="site-section scroll-mt-20 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Get In Touch</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Contact</h2>
+        </div>
+        <a href="https://www.alialqudah.com/contact" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 hover:text-sky-500 inline-flex items-center gap-1">
+          <span>Source: alialqudah.com/contact</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        <!-- Contact Information Card -->
+        <div class="lg:col-span-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm flex flex-col justify-between space-y-6">
+          <div class="space-y-5">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Current</span>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1">
+                Biomedical Instrumentation &amp; Signal Analysis Lab
+              </h3>
+              <p class="text-sm font-semibold text-sky-600 dark:text-sky-400">
+                University of Manitoba
+              </p>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                75 Chancellor's Circle University of Manitoba (Fort Garry campus) Winnipeg, Manitoba R3T 5V6
+              </p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                Price Faculty of Engineering, 75 Chancellors Cir, Winnipeg, MB R3T 5V6
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 block">Email</span>
+
+              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/70 dark:border-slate-700/70">
+                <a href="mailto:ali_qudah@hotmail.com" class="text-xs sm:text-sm font-mono text-slate-800 dark:text-slate-200 hover:text-sky-500">
+                  ali_qudah@hotmail.com
+                </a>
+                <button
+                  type="button"
+                  onclick="copyText('ali_qudah@hotmail.com', 'Copied ali_qudah@hotmail.com')"
+                  class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1"
+                >
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/70 dark:border-slate-700/70">
+                <a href="mailto:alqudaha@myumanitoba.ca" class="text-xs sm:text-sm font-mono text-slate-800 dark:text-slate-200 hover:text-sky-500">
+                  alqudaha@myumanitoba.ca
+                </a>
+                <button
+                  type="button"
+                  onclick="copyText('alqudaha@myumanitoba.ca', 'Copied alqudaha@myumanitoba.ca')"
+                  class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1"
+                >
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=Price+Faculty+of+Engineering+75+Chancellors+Cir+Winnipeg+MB+R3T+5V6"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-semibold hover:opacity-90 transition-all"
+            >
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+              <span>Open in Google Maps</span>
+            </a>
+            <button
+              type="button"
+              onclick="resetMapCenter()"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
+            >
+              <i data-lucide="locate-fixed" class="w-3.5 h-3.5"></i>
+              <span>Center Map</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Campus Map (Price Faculty of Engineering, University of Manitoba) -->
+        <div class="lg:col-span-7 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-3 shadow-sm flex flex-col">
+          <div id="campusMap" class="w-full h-80 sm:h-96 rounded-xl overflow-hidden"></div>
+          <div class="px-2 pt-2.5 pb-1 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
+            <span>Interactive Map: Price Faculty of Engineering, 75 Chancellors Cir, Winnipeg, MB R3T 5V6</span>
+            <span class="font-mono">49.8087° N, 97.1338° W</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Search Modal -->
+  <div id="searchModal" class="hidden fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm flex items-start justify-center pt-16 px-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3">
+        <i data-lucide="search" class="w-5 h-5 text-sky-500"></i>
+        <input
+          type="text"
+          id="globalSearchInput"
+          oninput="handleGlobalSearch(this.value)"
+          placeholder="Search courses, skills, collaborators, datasets, projects, or roles..."
+          class="w-full bg-transparent text-sm text-slate-900 dark:text-white focus:outline-none"
+        />
+        <button type="button" onclick="closeSearchModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div id="globalSearchResults" class="max-h-96 overflow-y-auto p-4 space-y-2 text-xs"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2.5 px-4 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-semibold shadow-xl border border-slate-700/50">
+    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 dark:text-emerald-600"></i>
+    <span id="toastMessage">Copied to clipboard</span>
+  </div>
+
+  <!-- Footer (Matches © 2026 Ali Mohammad Alqudah + quick links) -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="font-semibold text-slate-800 dark:text-slate-200">&copy; 2026 Ali Mohammad Alqudah</span>
+        <span>&bull;</span>
+        <span>Ph.D. in Biomedical Engineering, University of Manitoba</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="https://www.alialqudah.com/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-500 transition-colors">alialqudah.com</a>
+        <a href="https://alialqudah.github.io/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-500 transition-colors">alialqudah.github.io</a>
+        <a href="https://github.com/aliqudah/alialqudah.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-sky-500 transition-colors">github.com/aliqudah/alialqudah.github.io</a>
+        <a href="mailto:ali_qudah@hotmail.com" class="hover:text-sky-500 transition-colors">ali_qudah@hotmail.com</a>
+        <a href="mailto:alqudaha@myumanitoba.ca" class="hover:text-sky-500 transition-colors">alqudaha@myumanitoba.ca</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application State & Interactive Logic -->
+  <script>
+    // 1. Grounded Data Store (100% verbatim from https://www.alialqudah.com/)
+    const EXPERIENCE_DATA = [
+      {
+        id: 'exp-1',
+        title: 'PhD Student and Graduate Teaching & Research Assistant at the University of Manitoba',
+        department: 'Biomedical Engineering Program',
+        period: 'February 2022 - Now',
+        category: 'umanitoba',
+        badge: 'University of Manitoba',
+        details: [
+          'Part of Biomedical Instrumentation & Signal Analysis Lab.',
+          'Working Under the supervision of Professor Zahra Moussavi.'
+        ],
+        courses: []
+      },
+      {
+        id: 'exp-2',
+        title: 'Part-Time Programmer and Sleep Data Analyzer at Younes Respiratory Technologies (YRT)',
+        department: 'Software Development Department',
+        period: 'June 2022 - Now',
+        category: 'industry',
+        badge: 'Younes Respiratory Technologies',
+        details: [
+          'Working Under the supervision of Professor Younes Magdi.'
+        ],
+        courses: []
+      },
+      {
+        id: 'exp-3',
+        title: 'Part-Time Instructor at Yarmouk University',
+        department: 'Department of Biomedical Systems and Informatics Engineering',
+        period: 'February 2018 – February 2022',
+        category: 'yarmouk',
+        badge: 'Yarmouk University',
+        details: [],
+        coursesLabel: 'Courses Taught',
+        courses: [
+          'Biomedical Sensors.',
+          'Biomedical Signal Processing and Analysis.',
+          'Pattern Recognition and Decision Making.'
+        ]
+      },
+      {
+        id: 'exp-4',
+        title: 'Lab Engineer, Teaching & Research Assistant at Yarmouk University',
+        department: 'Department of Biomedical Systems and Informatics Engineering',
+        period: 'February 2018 – February 2022',
+        category: 'yarmouk',
+        badge: 'Yarmouk University',
+        details: [],
+        coursesLabel: 'Courses & Laboratories',
+        courses: [
+          'Medical Imaging.',
+          'Biomedical Instruments.',
+          'Microcontrollers and Programmable Circuits.',
+          'Biomedical Signal Processing.',
+          'Database System for Biomedical Engineering.',
+          'Bioinformatics Algorithms.'
+        ]
+      },
+      {
+        id: 'exp-5',
+        title: 'Part-Time Teaching Assistant at Yarmouk University',
+        department: 'Department of Biomedical Systems and Informatics Engineering',
+        period: 'June 2015 – January 2018',
+        category: 'yarmouk',
+        badge: 'Yarmouk University',
+        details: [],
+        coursesLabel: 'Courses Assisted',
+        courses: [
+          'Medical Imaging.',
+          'Biomedical Instruments.',
+          'Medical Informatics Applications.',
+          'Software Tools for Biomedical Engineers.',
+          'Electrical Circuits for Biomedical Engineers.',
+          'Pathophysiology for Biomedical Engineers.'
+        ]
+      },
+      {
+        id: 'exp-6',
+        title: 'Integrated Horizons for Training',
+        department: 'Part-Time Programmer',
+        period: 'May 2015 – February 2018',
+        category: 'industry',
+        badge: 'Engineering & Software Training',
+        details: [],
+        coursesLabel: 'Technologies & Modules',
+        courses: [
+          'C#.',
+          'Arduino.',
+          'PIC Microcontrollers.',
+          'MATLAB.',
+          'LabView.',
+          'Digital Signal Processing.',
+          'Digital Image Processing.'
+        ]
+      }
+    ];
+
+    const SKILLS_DATA = [
+      {
+        category: 'Programming',
+        icon: 'code-2',
+        color: 'sky',
+        items: ['MATLAB', 'C#', 'C++', 'Python']
+      },
+      {
+        category: 'Frameworks',
+        icon: 'layers',
+        color: 'indigo',
+        items: ['TensorFlow', 'Keras', 'Scikit-learn']
+      },
+      {
+        category: 'Database Management',
+        icon: 'database',
+        color: 'emerald',
+        items: ['SQL Server']
+      },
+      {
+        category: 'Design Architectures',
+        icon: 'git-merge',
+        color: 'amber',
+        items: ['Object-Oriented Design', 'Data Structure']
+      },
+      {
+        category: 'IDE',
+        icon: 'terminal',
+        color: 'purple',
+        items: ['Visual Studio', 'PyCharm', 'Colab']
+      },
+      {
+        category: 'Operating Systems',
+        icon: 'monitor',
+        color: 'rose',
+        items: ['Windows']
+      }
+    ];
+
+    const COLLABORATORS_DATA = [
+      {
+        name: 'Professor Zahra Moussavi',
+        role: 'My Ph.D. Supervisor',
+        status: 'current',
+        statusLabel: 'Current Collaborator'
+      },
+      {
+        name: 'Isam Abu-Qasmieh, Ph.D.',
+        role: 'Research Collaborator',
+        status: 'previous',
+        statusLabel: 'Previous Collaborator'
+      },
+      {
+        name: 'Hiam Alquraan, PhD',
+        role: 'Research Collaborator',
+        status: 'previous',
+        statusLabel: 'Previous Collaborator'
+      },
+      {
+        name: 'Amin Alqudah, PhD',
+        role: 'Research Collaborator',
+        status: 'previous',
+        statusLabel: 'Previous Collaborator'
+      },
+      {
+        name: 'Ihssan S. Massad, PhD',
+        role: 'Research Collaborator',
+        status: 'previous',
+        statusLabel: 'Previous Collaborator'
+      },
+      {
+        name: 'Khaled Alawneh, MD',
+        role: 'Clinical & Research Collaborator',
+        status: 'previous',
+        statusLabel: 'Previous Collaborator'
+      },
+      {
+        name: 'Yusra Obeidat, PhD',
+        role: 'Research Collaborator',
+        status: 'previous',
+        statusLabel: 'Previous Collaborator'
+      },
+      {
+        name: 'Abedalgany A. Athamneh, PhD',
+        role: 'Research Collaborator',
+        status: 'previous',
+        statusLabel: 'Previous Collaborator'
+      },
+      {
+        name: 'Shoroq Qazan, MSc',
+        role: 'Research Collaborator',
+        status: 'previous',
+        statusLabel: 'Previous Collaborator'
+      }
+    ];
+
+    const SECTION_TITLES = {
+      'home': 'Home',
+      'biography': 'Biography',
+      'cv': 'CV',
+      'education': 'Education',
+      'experience': 'Experience',
+      'lucidya-tech': 'Lucidya Tech',
+      'skills': 'Skills',
+      'publications': 'Publications',
+      'data': 'Data',
+      'academic-projects': 'Research Projects',
+      'collaborators': 'Collaborators',
+      'news': 'News',
+      'contact': 'Contact'
+    };
+
+    // Application State
+    let state = {
+      viewMode: 'scroll', // 'scroll' or 'tab'
+      activeSection: 'home',
+      expFilter: 'all',
+      skillFilter: 'all',
+      collabFilter: 'all',
+      darkMode: false
+    };
+
+    let campusMapInstance = null;
+
+    // Render Experience Cards
+    function renderExperience() {
+      const container = document.getElementById('experienceListContainer');
+      if (!container) return;
+
+      const filtered = state.expFilter === 'all'
+        ? EXPERIENCE_DATA
+        : EXPERIENCE_DATA.filter(item => item.category === state.expFilter);
+
+      container.innerHTML = filtered.map(item => `
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-sky-500/50 transition-all flex flex-col justify-between space-y-4">
+          <div class="space-y-2.5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-sky-50 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 text-xs font-semibold">
+                ${item.period}
+              </span>
+              <span class="text-[11px] font-medium text-slate-400 dark:text-slate-500">${item.badge}</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-snug">
+              ${item.title}
+            </h3>
+            <p class="text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+              ${item.department}
+            </p>
+            ${item.details.length > 0 ? `
+              <ul class="space-y-1 pt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                ${item.details.map(d => `<li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-1.5 shrink-0"></span><span>${d}</span></li>`).join('')}
+              </ul>
+            ` : ''}
+          </div>
+          ${item.courses.length > 0 ? `
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+              <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
+                ${item.coursesLabel || 'Courses & Topics'}
+              </span>
+              <div class="flex flex-wrap gap-1.5">
+                ${item.courses.map(c => `
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium">
+                    ${c}
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      `).join('');
+    }
+
+    function filterExperience(category) {
+      state.expFilter = category;
+      document.querySelectorAll('.exp-filter-btn').forEach(btn => {
+        const isMatch = btn.getAttribute('data-exp-filter') === category;
+        btn.className = isMatch
+          ? 'exp-filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all'
+          : 'exp-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all';
+      });
+      renderExperience();
+    }
+
+    // Render Skills Cards
+    function renderSkills() {
+      const container = document.getElementById('skillsGridContainer');
+      if (!container) return;
+
+      const filtered = state.skillFilter === 'all'
+        ? SKILLS_DATA
+        : SKILLS_DATA.filter(s => s.category === state.skillFilter);
+
+      container.innerHTML = filtered.map(group => `
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">${group.category}</h3>
+            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+              ${group.items.length} ${group.items.length === 1 ? 'skill' : 'skills'}
+            </span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            ${group.items.map(skill => `
+              <span class="px-3.5 py-2 rounded-xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs sm:text-sm font-semibold">
+                ${skill}
+              </span>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterSkills(category) {
+      state.skillFilter = category;
+      document.querySelectorAll('.skill-filter-btn').forEach(btn => {
+        const isMatch = btn.getAttribute('data-skill-cat') === category;
+        btn.className = isMatch
+          ? 'skill-filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all'
+          : 'skill-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all';
+      });
+      renderSkills();
+    }
+
+    // Render Collaborators
+    function renderCollaborators() {
+      const container = document.getElementById('collaboratorsGridContainer');
+      if (!container) return;
+
+      const filtered = state.collabFilter === 'all'
+        ? COLLABORATORS_DATA
+        : COLLABORATORS_DATA.filter(c => c.status === state.collabFilter);
+
+      container.innerHTML = filtered.map(person => {
+        const isCurrent = person.status === 'current';
+        return `
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border ${isCurrent ? 'border-sky-500/60 dark:border-sky-500/60' : 'border-slate-200 dark:border-slate-800'} p-5 shadow-sm flex items-center justify-between gap-4">
+            <div class="space-y-1">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${isCurrent ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}">
+                ${person.statusLabel}
+              </span>
+              <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base pt-1">${person.name}</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">${person.role}</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 font-bold text-xs shrink-0">
+              ${person.name.replace(/Professor |,.*$/g, '').split(' ').map(n => n[0]).slice(0, 2).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterCollaborators(filterType) {
+      state.collabFilter = filterType;
+      document.querySelectorAll('.collab-filter-btn').forEach(btn => {
+        const isMatch = btn.getAttribute('data-collab-filter') === filterType;
+        btn.className = isMatch
+          ? 'collab-filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all'
+          : 'collab-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all';
+      });
+      renderCollaborators();
+    }
+
+    // Navigation & View Mode (Scroll All vs. Multi-Page Tab Mode)
+    function navigateToSection(sectionId) {
+      state.activeSection = sectionId;
+
+      // Update active nav pill styling
+      document.querySelectorAll('.nav-pill').forEach(btn => {
+        const navTarget = btn.getAttribute('data-nav');
+        if (navTarget === sectionId) {
+          btn.classList.add('text-sky-600', 'dark:text-sky-400', 'bg-sky-50', 'dark:bg-sky-950/60', 'font-semibold');
+        } else {
+          btn.classList.remove('text-sky-600', 'dark:text-sky-400', 'bg-sky-50', 'dark:bg-sky-950/60', 'font-semibold');
+        }
+      });
+
+      if (state.viewMode === 'tab') {
+        applyTabVisibility();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const targetEl = document.getElementById(sectionId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      if (sectionId === 'contact' && campusMapInstance) {
+        setTimeout(() => campusMapInstance.invalidateSize(), 200);
+      }
+    }
+
+    function toggleViewMode() {
+      state.viewMode = state.viewMode === 'scroll' ? 'tab' : 'scroll';
+      const label = document.getElementById('viewModeLabel');
+      const banner = document.getElementById('tabModeBanner');
+
+      if (state.viewMode === 'tab') {
+        if (label) label.textContent = 'Mode: Page Tabs';
+        if (banner) banner.classList.remove('hidden');
+        applyTabVisibility();
+      } else {
+        if (label) label.textContent = 'Mode: Scroll All';
+        if (banner) banner.classList.add('hidden');
+        document.querySelectorAll('.site-section').forEach(sec => {
+          sec.classList.remove('section-hidden');
+        });
+        if (campusMapInstance) {
+          setTimeout(() => campusMapInstance.invalidateSize(), 200);
+        }
+      }
+    }
+
+    function applyTabVisibility() {
+      const activeTitleEl = document.getElementById('activeTabName');
+      if (activeTitleEl) {
+        activeTitleEl.textContent = SECTION_TITLES[state.activeSection] || 'Home';
+      }
+      document.querySelectorAll('.site-section').forEach(sec => {
+        if (sec.getAttribute('data-section') === state.activeSection) {
+          sec.classList.remove('section-hidden');
+        } else {
+          sec.classList.add('section-hidden');
+        }
+      });
+    }
+
+    // Dropdown & Mobile Menu Controls
+    function toggleMoreDropdown() {
+      const menu = document.getElementById('moreDropdownMenu');
+      if (menu) menu.classList.toggle('hidden');
+    }
+
+    function closeMoreDropdown() {
+      const menu = document.getElementById('moreDropdownMenu');
+      if (menu) menu.classList.add('hidden');
+    }
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileNavDrawer');
+      if (drawer) drawer.classList.toggle('hidden');
+    }
+
+    function closeMobileMenu() {
+      const drawer = document.getElementById('mobileNavDrawer');
+      if (drawer) drawer.classList.add('hidden');
+    }
+
+    // Theme Toggle
+    function toggleTheme() {
+      state.darkMode = !state.darkMode;
+      document.documentElement.classList.toggle('dark', state.darkMode);
+      try {
+        localStorage.setItem('alqudah_theme', state.darkMode ? 'dark' : 'light');
+      } catch (e) {}
+    }
+
+    // Clipboard Copy Helper with Toast Notification
+    function copyText(text, message) {
+      const done = () => showToast(message || 'Copied to clipboard');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+      } else {
+        fallbackCopy(text, done);
+      }
+    }
+
+    function fallbackCopy(text, callback) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        if (callback) callback();
+      } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    let toastTimeout = null;
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const label = document.getElementById('toastMessage');
+      if (!toast || !label) return;
+      label.textContent = msg;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 2800);
+    }
+
+    // Global Search Modal
+    function openSearchModal() {
+      const modal = document.getElementById('searchModal');
+      const input = document.getElementById('globalSearchInput');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      handleGlobalSearch(input ? input.value : '');
+      if (input) setTimeout(() => input.focus(), 50);
+    }
+
+    function closeSearchModal() {
+      const modal = document.getElementById('searchModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function handleGlobalSearch(query) {
+      const resultsEl = document.getElementById('globalSearchResults');
+      if (!resultsEl) return;
+      const q = (query || '').trim().toLowerCase();
+
+      const index = [
+        { section: 'home', title: 'Ali Mohammad Alqudah, Ph.D.', desc: 'Ph.D. In Biomedical Engineering, University of Manitoba | ali_qudah@hotmail.com | alqudaha@myumanitoba.ca' },
+        { section: 'biography', title: 'Biography & Peer Review Service', desc: 'Obstructive Sleep Apnea (OSA), tracheal breathing sounds, IEEE JBHI, IEEE Sensors, IEEE Access, MBEC, IEEE EMBS, ACM, CMBES' },
+        { section: 'cv', title: 'Curriculum Vitae (Last update Oct 2026)', desc: 'Download full CV PDF from Google Drive' },
+        { section: 'education', title: 'Ph.D., M.Sc., and B.S.E. Degrees', desc: 'University of Manitoba (2022–2026) and Yarmouk University (2015, 2018 High Honors)' },
+        { section: 'lucidya-tech', title: 'Lucidya Tech (Founder & CEO)', desc: 'Healthcare AI startup in Winnipeg focused on biomedical signal processing and embedded systems' },
+        { section: 'data', title: 'Mendeley Open-Access Datasets', desc: 'Augmented COVID-19 X-ray Images Dataset & PhotoPlethysmography / PiezoelectricPlethysmography / ECG Dataset' },
+        { section: 'academic-projects', title: 'Research Projects', desc: 'OSA Tracheal Sounds Deep Learning, Biomedical Classification, Smart Embedded ECG Tele-Diagnosis on Raspberry Pi' },
+        { section: 'publications', title: 'Publications & Academic Profiles', desc: 'Google Scholar, ResearchGate, Scopus, ORCID, ResearcherID, LinkedIn, JOIP, GitHub (CUES, ALL-Subtype-CNN)' },
+        { section: 'contact', title: 'Contact & Lab Location', desc: 'Biomedical Instrumentation & Signal Analysis Lab, 75 Chancellor\'s Circle, University of Manitoba, Winnipeg R3T 5V6' }
+      ];
+
+      EXPERIENCE_DATA.forEach(e => {
+        index.push({
+          section: 'experience',
+          title: e.title,
+          desc: `${e.department} (${e.period}) — ${e.courses.concat(e.details).join(' ')}`
+        });
+      });
+
+      COLLABORATORS_DATA.forEach(c => {
+        index.push({
+          section: 'collaborators',
+          title: c.name,
+          desc: `${c.statusLabel} — ${c.role}`
+        });
+      });
+
+      const matches = q === ''
+        ? index.slice(0, 7)
+        : index.filter(item => item.title.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q));
+
+      if (matches.length === 0) {
+        resultsEl.innerHTML = `<div class="p-4 text-center text-slate-500">No matching items found for "${query}".</div>`;
+        return;
+      }
+
+      resultsEl.innerHTML = matches.map(m => `
+        <button
+          type="button"
+          onclick="navigateToSection('${m.section}'); closeSearchModal();"
+          class="w-full text-left p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-start justify-between gap-3"
+        >
+          <div>
+            <div class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">${m.title}</div>
+            <div class="text-slate-500 dark:text-slate-400 text-xs line-clamp-2 mt-0.5">${m.desc}</div>
+          </div>
+          <span class="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 text-[10px] font-semibold uppercase shrink-0">
+            ${SECTION_TITLES[m.section]}
+          </span>
+        </button>
+      `).join('');
+    }
+
+    // Initialize Leaflet Map with ArcGIS World Street Map Tiles (Canvas-safe keyless HTTPS tiles)
+    function initCampusMap() {
+      const mapContainer = document.getElementById('campusMap');
+      if (!mapContainer || typeof L === 'undefined') return;
+
+      const coords = [49.8087, -97.1338]; // Price Faculty of Engineering, 75 Chancellors Cir, Winnipeg
+      campusMapInstance = L.map('campusMap', {
+        scrollWheelZoom: false
+      }).setView(coords, 15);
+
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; University of Manitoba Fort Garry Campus',
+        maxZoom: 19
+      }).addTo(campusMapInstance);
+
+      const marker = L.marker(coords).addTo(campusMapInstance);
+      marker.bindPopup(
+        '<strong>Biomedical Instrumentation &amp; Signal Analysis Lab</strong><br/>Price Faculty of Engineering<br/>75 Chancellors Cir, Winnipeg, MB R3T 5V6'
+      ).openPopup();
+    }
+
+    function resetMapCenter() {
+      if (campusMapInstance) {
+        campusMapInstance.setView([49.8087, -97.1338], 15);
+      }
+    }
+
+    // Close dropdowns on outside click or Escape key
+    document.addEventListener('click', (e) => {
+      const dropdown = document.getElementById('moreDropdownContainer');
+      if (dropdown && !dropdown.contains(e.target)) {
+        closeMoreDropdown();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSearchModal();
+        closeMoreDropdown();
+      }
+    });
+
+    // Initialize on DOM Load
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        const savedTheme = localStorage.getItem('alqudah_theme');
+        if (savedTheme === 'dark') {
+          state.darkMode = true;
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+
+      renderExperience();
+      renderSkills();
+      renderCollaborators();
+      initCampusMap();
+
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
