@@ -78,37 +78,6 @@
 </head>
 <body class="bg-sky-50/40 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-sky-600 selection:text-white transition-colors duration-300">
 
-  <!-- Top Academic Identifier & Live Address Bar -->
-  <div class="bg-gradient-to-r from-blue-950 via-slate-900 to-sky-950 text-blue-100 text-xs border-b border-blue-900/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-3 flex-wrap">
-        <span class="inline-flex items-center gap-1.5 text-sky-400 font-medium">
-          <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
-          Biomedical Instrumentation &amp; Signal Analysis Lab &bull; University of Manitoba
-        </span>
-        <span class="hidden lg:inline text-slate-600">|</span>
-        <span class="hidden lg:inline font-mono text-[11px] text-slate-400">
-          ORCID: <a href="https://orcid.org/0000-0002-5417-0043" target="_blank" rel="noopener noreferrer" class="text-cyan-300 hover:underline">0000-0002-5417-0043</a> &bull;
-          Scopus ID: <a href="https://www.scopus.com/authid/detail.uri?authorId=57189294287" target="_blank" rel="noopener noreferrer" class="text-sky-300 hover:underline">57189294287</a> &bull;
-          ResearcherID: <span class="text-indigo-300">A-1390-2017</span>
-        </span>
-      </div>
-      <div class="flex items-center gap-3.5 flex-wrap">
-        <a href="https://aliqudah.github.io/" target="_blank" rel="noopener noreferrer" class="hover:text-white text-sky-300 font-semibold transition-colors inline-flex items-center gap-1">
-          <i data-lucide="globe" class="w-3.5 h-3.5"></i>
-          <span>aliqudah.github.io</span>
-        </a>
-        <a href="https://github.com/aliqudah" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors inline-flex items-center gap-1">
-          <i data-lucide="github" class="w-3.5 h-3.5"></i>
-          <span>github.com/aliqudah</span>
-        </a>
-        <a href="https://scholar.google.com/citations?user=YeEyzMYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors inline-flex items-center gap-1">
-          <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
-          <span>Google Scholar (3,137 Citations)</span>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <!-- Sticky Main Header Navigation (Matches all 13 sections of aliqudah.github.io + Interactive Metrics) -->
   <header class="sticky top-0 z-40 glass-nav bg-white/90 dark:bg-slate-900/90 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors">
@@ -1524,6 +1493,32 @@
           </div>
         </div>
 
+        <!-- Domain Filter Chips & Bulk Export All BibTeX -->
+        <div class="flex flex-wrap items-center justify-between gap-2 pb-1">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <button type="button" onclick="setPubTopicFilter('all')" data-pub-topic="all" class="pub-topic-btn px-3 py-1 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all">
+              All Topics (10)
+            </button>
+            <button type="button" onclick="setPubTopicFilter('Medical Imaging')" data-pub-topic="Medical Imaging" class="pub-topic-btn px-3 py-1 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+              Medical Imaging &amp; OCT/CNN
+            </button>
+            <button type="button" onclick="setPubTopicFilter('Biomedical Signals')" data-pub-topic="Biomedical Signals" class="pub-topic-btn px-3 py-1 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+              ECG &amp; Biomedical Signals
+            </button>
+            <button type="button" onclick="setPubTopicFilter('Clinical AI Evaluation')" data-pub-topic="Clinical AI Evaluation" class="pub-topic-btn px-3 py-1 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+              Clinical AI &amp; CUES (2026)
+            </button>
+          </div>
+          <button
+            type="button"
+            onclick="exportAllBibtex()"
+            class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-sky-50 dark:bg-sky-950/80 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300 text-xs font-semibold hover:bg-sky-100 transition-all"
+          >
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>Copy All 10 BibTeX Entries</span>
+          </button>
+        </div>
+
         <!-- Publications List Container -->
         <div id="publicationsTableContainer" class="space-y-3"></div>
       </div>
@@ -1668,6 +1663,135 @@
           <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
             Embedded biomedical instrumentation and remote cardiac monitoring architecture built on Raspberry Pi for real-time tele-diagnosis.
           </p>
+        </div>
+      </div>
+
+      <!-- Interactive Academic Research Demonstrators: CUES Clinical AI Calculator & Biomedical Signal Waveform Explorer -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-2">
+        <!-- 1. Interactive CUES Multiplicative Composite Metric Sandbox (MDPI Mathematics 2026) -->
+        <div class="lg:col-span-6 bg-white dark:bg-slate-900 rounded-2xl border border-sky-200/80 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between space-y-5">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 text-[11px] font-bold">
+                <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+                Interactive Research Sandbox &bull; MDPI Mathematics (2026)
+              </span>
+              <a href="https://www.mdpi.com/2227-7390/14/3/398" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1">
+                <span>Paper</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            </div>
+            <h3 class="font-academic text-lg font-bold text-slate-900 dark:text-white">
+              CUES Clinical AI Evaluation Metric Calculator
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              Test Dr. Alqudah's multiplicative geometric mean framework <code class="font-mono text-sky-700 dark:text-sky-300">CUES = (C &times; U &times; E &times; S)<sup>1/4</sup></code> that penalizes clinical AI models if any single pillar—Calibration, Utility, Equity, or Stability—collapses.
+            </p>
+          </div>
+
+          <!-- 4 Interactive Pillar Sliders -->
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-700 dark:text-slate-200">Calibration (C) — Brier Skill Score</span>
+                <span id="cuesValC" class="font-mono text-sky-600 dark:text-sky-400">0.88</span>
+              </div>
+              <input type="range" id="cuesSliderC" min="0.05" max="1.00" step="0.01" value="0.88" oninput="updateCuesCalculator()" class="w-full accent-sky-600 cursor-pointer" />
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-700 dark:text-slate-200">Clinical Utility (U) — Integrated Net Benefit</span>
+                <span id="cuesValU" class="font-mono text-blue-600 dark:text-sky-400">0.84</span>
+              </div>
+              <input type="range" id="cuesSliderU" min="0.05" max="1.00" step="0.01" value="0.84" oninput="updateCuesCalculator()" class="w-full accent-blue-600 cursor-pointer" />
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-700 dark:text-slate-200">Subgroup Equity (E) — Fairness Across Cohorts</span>
+                <span id="cuesValE" class="font-mono text-indigo-600 dark:text-indigo-400">0.91</span>
+              </div>
+              <input type="range" id="cuesSliderE" min="0.05" max="1.00" step="0.01" value="0.91" oninput="updateCuesCalculator()" class="w-full accent-indigo-600 cursor-pointer" />
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-700 dark:text-slate-200">Bootstrap Stability (S) — Resampling Confidence</span>
+                <span id="cuesValS" class="font-mono text-cyan-600 dark:text-cyan-400">0.93</span>
+              </div>
+              <input type="range" id="cuesSliderS" min="0.05" max="1.00" step="0.01" value="0.93" oninput="updateCuesCalculator()" class="w-full accent-cyan-600 cursor-pointer" />
+            </div>
+          </div>
+
+          <!-- CUES Composite Readout & Preset Buttons -->
+          <div class="p-4 rounded-2xl bg-gradient-to-r from-blue-950 via-sky-900 to-indigo-950 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-wider text-sky-300 block">Composite CUES Score</span>
+              <div class="flex items-baseline gap-2.5 mt-0.5">
+                <span id="cuesCompositeReadout" class="text-2xl sm:text-3xl font-extrabold text-white font-mono">0.889</span>
+                <span id="cuesArithmeticReadout" class="text-xs text-sky-200 font-mono">(Arithmetic Mean: 0.890)</span>
+              </div>
+              <span id="cuesInterpretationBadge" class="text-[11px] text-sky-300 font-medium block mt-1">Clinically Balanced &amp; Trustworthy Deployment Profile</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5 shrink-0">
+              <button type="button" onclick="applyCuesPreset(0.88, 0.84, 0.91, 0.93)" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-[11px] font-semibold text-white transition-colors">
+                Balanced AI
+              </button>
+              <button type="button" onclick="applyCuesPreset(0.92, 0.89, 0.18, 0.94)" class="px-2.5 py-1.5 rounded-lg bg-sky-500/30 hover:bg-sky-500/40 border border-sky-400/30 text-[11px] font-semibold text-sky-100 transition-colors">
+                Biased Subgroup
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Interactive Biomedical Signal Waveform Lab (Tracheal OSA Sounds vs. ECG Arrhythmia vs. PPG) -->
+        <div class="lg:col-span-6 bg-white dark:bg-slate-900 rounded-2xl border border-sky-200/80 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-sky-300 text-[11px] font-bold">
+                <i data-lucide="activity" class="w-3.5 h-3.5"></i>
+                Interactive Signal Modality Visualizer
+              </span>
+              <div class="inline-flex rounded-xl bg-slate-100 dark:bg-slate-800 p-1">
+                <button type="button" id="sigBtnTracheal" onclick="setSignalModality('tracheal')" class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-white dark:bg-slate-900 text-sky-600 dark:text-sky-400 shadow-sm transition-all">
+                  OSA Tracheal Sound
+                </button>
+                <button type="button" id="sigBtnEcg" onclick="setSignalModality('ecg')" class="px-2.5 py-1 rounded-lg text-[11px] font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+                  Single-Lead ECG
+                </button>
+                <button type="button" id="sigBtnPpg" onclick="setSignalModality('ppg')" class="px-2.5 py-1 rounded-lg text-[11px] font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+                  PPG / PZP Pulse
+                </button>
+              </div>
+            </div>
+            <h3 id="signalLabTitle" class="font-academic text-lg font-bold text-slate-900 dark:text-white">
+              Wakefulness Tracheal Breathing Sound (TBS) Envelope
+            </h3>
+            <p id="signalLabDesc" class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              Acoustic respiratory cycles (inspiratory &amp; expiratory spectral power) used to screen Obstructive Sleep Apnea (OSA) severity during wakefulness at the Biomedical Instrumentation &amp; Signal Analysis Lab.
+            </p>
+          </div>
+
+          <!-- Oscilloscope Canvas -->
+          <div class="relative w-full h-44 rounded-2xl bg-slate-950 border border-blue-900/60 overflow-hidden p-2 flex items-center justify-center">
+            <canvas id="biomedSignalCanvas" class="w-full h-full"></canvas>
+          </div>
+
+          <!-- Signal Controls: Noise / SNR & Playback Pause -->
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+            <div class="flex items-center gap-3 flex-1 min-w-[200px]">
+              <span class="text-xs font-semibold text-slate-600 dark:text-slate-300 shrink-0">Artifact / Noise:</span>
+              <input type="range" id="signalNoiseSlider" min="0" max="0.35" step="0.01" value="0.04" oninput="updateSignalNoise(this.value)" class="w-full accent-sky-600 cursor-pointer" />
+              <span id="signalNoiseVal" class="text-xs font-mono text-sky-600 dark:text-sky-400 w-10 text-right">4%</span>
+            </div>
+            <button
+              type="button"
+              id="signalPauseBtn"
+              onclick="toggleSignalAnimation()"
+              class="px-3.5 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition-all inline-flex items-center gap-1.5"
+            >
+              <i data-lucide="pause" class="w-3.5 h-3.5"></i>
+              <span id="signalPauseBtnText">Pause Sweep</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -2630,6 +2754,14 @@
       const sortMode = document.getElementById('pubSortSelect')?.value || 'citations_desc';
 
       let list = SELECTED_PUBLICATIONS.filter(p => {
+        if (currentPubTopic !== 'all') {
+          const isSignal = ['pub-4', 'pub-5', 'pub-7', 'pub-8'].includes(p.id);
+          const isClinicalEval = ['pub-9', 'pub-10'].includes(p.id);
+          const isImaging = ['pub-1', 'pub-2', 'pub-3', 'pub-6', 'pub-10'].includes(p.id);
+          if (currentPubTopic === 'Biomedical Signals' && !isSignal) return false;
+          if (currentPubTopic === 'Clinical AI Evaluation' && !isClinicalEval) return false;
+          if (currentPubTopic === 'Medical Imaging' && !isImaging) return false;
+        }
         if (!query) return true;
         return (
           p.title.toLowerCase().includes(query) ||
@@ -3158,6 +3290,189 @@
       }
     });
 
+    // Interactive CUES Calculator Logic
+    function updateCuesCalculator() {
+      const c = parseFloat(document.getElementById('cuesSliderC')?.value || 0.88);
+      const u = parseFloat(document.getElementById('cuesSliderU')?.value || 0.84);
+      const e = parseFloat(document.getElementById('cuesSliderE')?.value || 0.91);
+      const sVal = parseFloat(document.getElementById('cuesSliderS')?.value || 0.93);
+
+      document.getElementById('cuesValC').textContent = c.toFixed(2);
+      document.getElementById('cuesValU').textContent = u.toFixed(2);
+      document.getElementById('cuesValE').textContent = e.toFixed(2);
+      document.getElementById('cuesValS').textContent = sVal.toFixed(2);
+
+      const geom = Math.pow(c * u * e * sVal, 0.25);
+      const arith = (c + u + e + sVal) / 4.0;
+
+      document.getElementById('cuesCompositeReadout').textContent = geom.toFixed(3);
+      document.getElementById('cuesArithmeticReadout').textContent = `(Arithmetic Mean: ${arith.toFixed(3)})`;
+
+      const badge = document.getElementById('cuesInterpretationBadge');
+      const minPillar = Math.min(c, u, e, sVal);
+      if (minPillar < 0.40) {
+        badge.textContent = 'Alert: Multiplicative Penalty Triggered (Severe Pillar Deficit Detected)';
+        badge.className = 'text-[11px] text-sky-200 font-semibold block mt-1';
+      } else if (geom >= 0.80) {
+        badge.textContent = 'Clinically Balanced & Trustworthy Deployment Profile';
+        badge.className = 'text-[11px] text-sky-300 font-medium block mt-1';
+      } else {
+        badge.textContent = 'Moderate Clinical Readiness — Calibration/Equity Tuning Recommended';
+        badge.className = 'text-[11px] text-sky-200 font-medium block mt-1';
+      }
+    }
+
+    function applyCuesPreset(c, u, e, sVal) {
+      document.getElementById('cuesSliderC').value = c;
+      document.getElementById('cuesSliderU').value = u;
+      document.getElementById('cuesSliderE').value = e;
+      document.getElementById('cuesSliderS').value = sVal;
+      updateCuesCalculator();
+    }
+
+    // Interactive Biomedical Signal Waveform Oscilloscope
+    let signalState = {
+      modality: 'tracheal',
+      noise: 0.04,
+      paused: false,
+      phase: 0,
+      rafId: null
+    };
+
+    const SIGNAL_META = {
+      tracheal: {
+        title: 'Wakefulness Tracheal Breathing Sound (TBS) Envelope',
+        desc: 'Acoustic respiratory cycles (inspiratory & expiratory spectral power) used to screen Obstructive Sleep Apnea (OSA) severity during wakefulness at the Biomedical Instrumentation & Signal Analysis Lab.'
+      },
+      ecg: {
+        title: 'Single-Lead Electrocardiogram (ECG) Beat Waveform',
+        desc: 'P-QRS-T cardiac depolarization morphology analyzed via higher-order spectral estimation and Iris Spectrogram CNNs for arrhythmia classification.'
+      },
+      ppg: {
+        title: 'Photoplethysmography (PPG) & Piezoelectric Pulse Wave',
+        desc: 'Arterial pulse wave with systolic peak and dicrotic notch from Dr. Alqudah\'s Mendeley PPG/PZP/ECG comparative time-frequency dataset.'
+      }
+    };
+
+    function setSignalModality(mod) {
+      signalState.modality = mod;
+      const meta = SIGNAL_META[mod];
+      if (meta) {
+        document.getElementById('signalLabTitle').textContent = meta.title;
+        document.getElementById('signalLabDesc').textContent = meta.desc;
+      }
+      ['tracheal', 'ecg', 'ppg'].forEach(k => {
+        const btn = document.getElementById('sigBtn' + k.charAt(0).toUpperCase() + k.slice(1));
+        if (btn) {
+          btn.className = (k === mod)
+            ? 'px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-white dark:bg-slate-900 text-sky-600 dark:text-sky-400 shadow-sm transition-all'
+            : 'px-2.5 py-1 rounded-lg text-[11px] font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all';
+        }
+      });
+    }
+
+    function updateSignalNoise(val) {
+      signalState.noise = parseFloat(val) || 0;
+      document.getElementById('signalNoiseVal').textContent = Math.round(signalState.noise * 100) + '%';
+    }
+
+    function toggleSignalAnimation() {
+      signalState.paused = !signalState.paused;
+      const txt = document.getElementById('signalPauseBtnText');
+      if (txt) txt.textContent = signalState.paused ? 'Resume Sweep' : 'Pause Sweep';
+    }
+
+    function drawBiomedSignal() {
+      const canvas = document.getElementById('biomedSignalCanvas');
+      if (!canvas) return;
+      const rect = canvas.parentElement.getBoundingClientRect();
+      if (canvas.width !== Math.floor(rect.width - 16) || canvas.height !== Math.floor(rect.height - 16)) {
+        canvas.width = Math.max(260, Math.floor(rect.width - 16));
+        canvas.height = Math.max(120, Math.floor(rect.height - 16));
+      }
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width;
+      const h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+
+      // Subtle oscilloscope grid
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.12)';
+      ctx.lineWidth = 1;
+      for (let gx = 0; gx < w; gx += 32) {
+        ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, h); ctx.stroke();
+      }
+      for (let gy = 0; gy < h; gy += 28) {
+        ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(w, gy); ctx.stroke();
+      }
+
+      // Draw waveform
+      ctx.beginPath();
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 2.2;
+      const mid = h / 2;
+      const amp = h * 0.36;
+
+      for (let x = 0; x < w; x++) {
+        const t = (x / w) * Math.PI * 4 + signalState.phase;
+        let yVal = 0;
+        if (signalState.modality === 'tracheal') {
+          const env = Math.sin(t * 0.5);
+          const carrier = Math.sin(t * 9) * 0.55 + Math.cos(t * 15) * 0.45;
+          yVal = env * carrier;
+        } else if (signalState.modality === 'ecg') {
+          const cycle = ((t % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
+          const pWave = 0.18 * Math.exp(-Math.pow((cycle - 1.8) / 0.22, 2));
+          const qWave = -0.22 * Math.exp(-Math.pow((cycle - 2.42) / 0.06, 2));
+          const rWave = 1.05 * Math.exp(-Math.pow((cycle - 2.55) / 0.08, 2));
+          const sWave = -0.32 * Math.exp(-Math.pow((cycle - 2.68) / 0.07, 2));
+          const tWave = 0.32 * Math.exp(-Math.pow((cycle - 3.45) / 0.28, 2));
+          yVal = pWave + qWave + rWave + sWave + tWave - 0.15;
+        } else {
+          const cycle = ((t % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
+          const systolic = 0.85 * Math.exp(-Math.pow((cycle - 2.0) / 0.42, 2));
+          const dicrotic = 0.38 * Math.exp(-Math.pow((cycle - 3.0) / 0.48, 2));
+          yVal = systolic + dicrotic - 0.35;
+        }
+        const deterministicNoise = Math.sin(x * 1.7 + signalState.phase * 3.1) * signalState.noise;
+        const py = mid - (yVal + deterministicNoise) * amp;
+        if (x === 0) ctx.moveTo(x, py);
+        else ctx.lineTo(x, py);
+      }
+      ctx.stroke();
+
+      if (!signalState.paused) {
+        signalState.phase += 0.045;
+      }
+      signalState.rafId = requestAnimationFrame(drawBiomedSignal);
+    }
+
+    // Publication Topic Filter & Bulk BibTeX Export
+    let currentPubTopic = 'all';
+    function setPubTopicFilter(topic) {
+      currentPubTopic = topic;
+      document.querySelectorAll('.pub-topic-btn').forEach(btn => {
+        const isMatch = btn.getAttribute('data-pub-topic') === topic;
+        btn.className = isMatch
+          ? 'pub-topic-btn px-3 py-1 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all'
+          : 'pub-topic-btn px-3 py-1 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all';
+      });
+      renderPublications();
+    }
+
+    function exportAllBibtex() {
+      const allBib = SELECTED_PUBLICATIONS.map(pub => `@article{${pub.bibtexKey},
+  author  = {${pub.authors}},
+  title   = {${pub.title}},
+  journal = {${pub.journal}},${pub.volume ? `
+  volume  = {${pub.volume}},` : ''}${pub.number ? `
+  number  = {${pub.number}},` : ''}${pub.pages ? `
+  pages   = {${pub.pages}},` : ''}
+  year    = {${pub.year}},
+  url     = {${pub.url}}
+}`).join('\n\n');
+      copyText(allBib, 'Copied all 10 BibTeX entries to clipboard');
+    }
+
     // Initialize on DOM Load
     window.addEventListener('DOMContentLoaded', () => {
       try {
@@ -3176,6 +3491,9 @@
       initScholarChart();
       initPublicationTypesChart();
       initCampusMap();
+      updateCuesCalculator();
+      if (signalState.rafId) cancelAnimationFrame(signalState.rafId);
+      drawBiomedSignal();
 
       if (typeof lucide !== 'undefined') {
         lucide.createIcons();
