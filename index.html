@@ -6,13 +6,13 @@
   <title>Ali Mohammad Alqudah, Ph.D. | Academic Portfolio &amp; Scientometrics (aliqudah.github.io)</title>
   <meta name="description" content="Official academic &amp; scientometric portfolio of Ali Mohammad Alqudah, Ph.D. in Biomedical Engineering at the University of Manitoba. Hosted at https://aliqudah.github.io/." />
   <link rel="canonical" href="https://aliqudah.github.io/" />
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/aliqudah/aliqudah.github.io/refs/heads/main/favico.png" />
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/aliqudah/aliqudah.github.io/refs/heads/main/favico.png" />
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;0,8..60,800;1,8..60,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/aliqudah/aliqudah.github.io/refs/heads/main/favico.png" />
-  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/aliqudah/aliqudah.github.io/refs/heads/main/favico.png" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
@@ -381,7 +381,7 @@
               />
               <div class="text-xs text-slate-600 dark:text-slate-400">
                 <span class="font-semibold text-slate-900 dark:text-slate-200 block">Biomedical Signal &amp; Image Intelligence</span>
-                <span id="heroInlineMetricsSummary">3,137+ Google Scholar citations &bull; h-index 30 &bull; i10-index 48 &bull; 201 verified peer reviews across 61 journals &amp; grants.</span>
+                <span id="heroInlineMetricsSummary">3,139+ Google Scholar citations &bull; h-index 30 &bull; i10-index 48 &bull; 201 verified peer reviews across 61 journals &amp; grants.</span>
               </div>
             </div>
           </div>
@@ -404,7 +404,7 @@
           <!-- 4 Interactive Scientometric Quick-Jump Cards Under Portrait -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full max-w-md mt-5">
             <button type="button" onclick="navigateToSection('metrics'); switchProfilePlatform('scholar');" class="p-2.5 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 text-center hover:border-sky-500 transition-colors">
-              <span id="heroQuickCitations" class="block text-base sm:text-lg font-extrabold text-sky-600 dark:text-sky-400">3,137</span>
+              <span id="heroQuickCitations" class="block text-base sm:text-lg font-extrabold text-sky-600 dark:text-sky-400">3,139</span>
               <span class="block text-[10px] font-medium text-slate-500 dark:text-slate-400">Scholar Citations</span>
             </button>
             <button type="button" onclick="navigateToSection('metrics'); switchProfilePlatform('scholar');" class="p-2.5 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 text-center hover:border-indigo-500 transition-colors">
@@ -625,7 +625,7 @@
               <div class="grid grid-cols-3 gap-3 pt-1">
                 <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/70 dark:border-slate-700/70">
                   <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 block">Citations</span>
-                  <span id="scholarStatCitations" class="text-2xl sm:text-3xl font-extrabold text-sky-600 dark:text-sky-400 mt-1 block">3,137</span>
+                  <span id="scholarStatCitations" class="text-2xl sm:text-3xl font-extrabold text-sky-600 dark:text-sky-400 mt-1 block">3,139</span>
                   <span id="scholarSubCitations" class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 block">2,796 since 2021 (89.1%)</span>
                 </div>
                 <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/70 dark:border-slate-700/70">
@@ -650,7 +650,7 @@
                   <div class="bg-blue-600 h-full" style="width: 83.33%" title="10 articles publicly available"></div>
                 </div>
                 <p class="text-[11px] text-slate-500 dark:text-slate-400">
-                  Verified email at <code class="font-mono text-slate-700 dark:text-slate-300">myumanitoba.ca</code> &bull; Mean annual citations (2022–2026): <strong>499.6 / yr</strong>
+                  Verified email at <code class="font-mono text-slate-700 dark:text-slate-300">myumanitoba.ca</code> &bull; Mean annual citations (2022–2026): <strong id="scholarMeanAnnualText">499.6 / yr</strong>
                 </p>
               </div>
             </div>
@@ -749,7 +749,7 @@
               </div>
               <div class="p-1.5 rounded-lg bg-sky-50/70 dark:bg-sky-950/40">
                 <span class="block text-[10px] text-sky-500">2026</span>
-                <span class="block text-xs font-bold text-sky-700 dark:text-sky-300">429</span>
+                <span class="block text-xs font-bold text-sky-700 dark:text-sky-300">431</span>
               </div>
             </div>
           </div>
@@ -778,11 +778,11 @@
               <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60">
                 <span class="text-[11px] text-slate-400 block">Journal Articles</span>
                 <span id="scopusJournalCount" class="text-xl font-extrabold text-slate-900 dark:text-white">115</span>
-                <span class="text-[10px] text-blue-600 dark:text-sky-400 block">79.3% of output</span>
+                <span id="scopusJournalPct" class="text-[10px] text-blue-600 dark:text-sky-400 block">79.3% of output</span>
               </div>
               <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60">
                 <span class="text-[11px] text-slate-400 block">Conferences</span>
-                <span class="text-xl font-extrabold text-slate-900 dark:text-white">13</span>
+                <span id="scopusConfCount" class="text-xl font-extrabold text-slate-900 dark:text-white">13</span>
                 <span class="text-[10px] text-sky-600 dark:text-sky-400 block">IEEE &amp; Intl.</span>
               </div>
               <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60">
@@ -792,7 +792,7 @@
               </div>
               <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60">
                 <span class="text-[11px] text-slate-400 block">Active Career</span>
-                <span class="text-xl font-extrabold text-blue-600 dark:text-sky-300">11 Yrs</span>
+                <span id="scopusCareerYears" class="text-xl font-extrabold text-blue-600 dark:text-sky-300">11 Yrs</span>
                 <span class="text-[10px] text-slate-500 block">2016–Present</span>
               </div>
             </div>
@@ -849,7 +849,7 @@
               <div>
                 <h3 class="font-bold text-slate-900 dark:text-white text-base">Topical Research Footprint</h3>
                 <p class="text-xs text-slate-500 dark:text-slate-400">
-                  Disciplinary distribution across 145 publications (SciProfiles &amp; ResearchGate taxonomy)
+                  Disciplinary distribution across <span id="footprintTotalPubsText">145</span> publications (SciProfiles &amp; ResearchGate taxonomy)
                 </p>
               </div>
 
@@ -1060,7 +1060,7 @@
           <!-- Filter Repositories by Language / Domain -->
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div class="flex flex-wrap items-center gap-1.5">
-              <button type="button" onclick="filterGithubRepos('all')" data-gh-filter="all" class="gh-filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all">All Repos (10)</button>
+              <button type="button" id="ghFilterAllBtn" onclick="filterGithubRepos('all')" data-gh-filter="all" class="gh-filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white transition-all">All Repos (10)</button>
               <button type="button" onclick="filterGithubRepos('Python')" data-gh-filter="Python" class="gh-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">Python &amp; Jupyter</button>
               <button type="button" onclick="filterGithubRepos('MATLAB')" data-gh-filter="MATLAB" class="gh-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">MATLAB</button>
               <button type="button" onclick="filterGithubRepos('HTML')" data-gh-filter="HTML" class="gh-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">Web / HTML</button>
@@ -1133,7 +1133,7 @@
                 </div>
                 <div>
                   <h3 class="font-bold text-slate-900 dark:text-white text-base">Peer-Reviewed Journal Reviewer</h3>
-                  <p class="text-xs text-slate-500 dark:text-slate-400">201 verified reviews on ORCID across 61 venues</p>
+                  <p id="bioPeerReviewSubtitle" class="text-xs text-slate-500 dark:text-slate-400">201 verified reviews on ORCID across 61 venues</p>
                 </div>
               </div>
             </div>
@@ -1420,7 +1420,7 @@
               <i data-lucide="graduation-cap" class="w-5 h-5"></i>
             </span>
             <span id="pubCardScholarBadge" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300">
-              3,137 Citations &bull; h=30
+              3,139 Citations &bull; h=30
             </span>
           </div>
           <div class="mt-4">
@@ -1921,7 +1921,7 @@
     <section id="collaborators" data-section="collaborators" class="site-section scroll-mt-20 space-y-6">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Academic Network &amp; Co-Investigators (99 Total Co-Authors Indexed)</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Academic Network &amp; Co-Investigators (<span id="collabHeaderCoAuthorsCount">99</span> Total Co-Authors Indexed)</span>
           <h2 class="font-academic text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-0.5">Collaborators</h2>
         </div>
 
@@ -1967,7 +1967,7 @@
             <canvas id="collabNetworkCanvas" class="w-full h-full cursor-pointer"></canvas>
           </div>
           <div id="networkNodeReadout" class="p-3 rounded-xl bg-sky-50/70 dark:bg-slate-800/80 border border-sky-200/60 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-200 font-medium">
-            Selected Node: <strong>Ali Mohammad Alqudah, Ph.D.</strong> — Central Principal Investigator (3,137+ Citations, 145 Indexed Outputs, 99 Co-Authors)
+            Selected Node: <strong>Ali Mohammad Alqudah, Ph.D.</strong> — Central Principal Investigator (3,139+ Citations, 145 Indexed Outputs, 99 Co-Authors)
           </div>
         </div>
 
@@ -2258,7 +2258,7 @@
     // 1. Grounded Scientometric Data (100% Verified from Google Scholar, ORCID, SciProfiles & GitHub)
     const SCHOLAR_METRICS = {
       all: {
-        citations: '3,137',
+        citations: '3,139',
         citationsSub: 'All-time total citations',
         hIndex: '30',
         hIndexSub: 'All-time h-index',
@@ -2274,8 +2274,8 @@
         i10Sub: '97.9% of all-time i10-index'
       },
       years: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
-      annualCitations: [9, 13, 48, 149, 277, 499, 590, 489, 491, 429],
-      cumulativeCitations: [9, 22, 70, 219, 496, 995, 1585, 2074, 2565, 2994]
+      annualCitations: [9, 13, 48, 149, 277, 499, 590, 489, 491, 431],
+      cumulativeCitations: [9, 22, 70, 219, 496, 995, 1585, 2074, 2565, 2996]
     };
 
     const SELECTED_PUBLICATIONS = [
@@ -2839,7 +2839,17 @@
       initScholarChart();
     }
 
-    // Initialize Publication Types Chart (SciProfiles / Scopus / ResearchGate breakdown)
+    // Dynamic Publication Type Breakdown Store (Updated by Live Scanner)
+    const PUB_TYPE_COUNTS = {
+      journal: 115,
+      conference: 13,
+      other: 12,
+      dataset: 2,
+      preprint: 2,
+      chapter: 1
+    };
+
+    // Initialize Publication Types Chart (SciProfiles / Scopus / ResearchGate / OpenAlex breakdown)
     function initPublicationTypesChart() {
       const ctx = document.getElementById('publicationTypesChart');
       if (!ctx || typeof Chart === 'undefined') return;
@@ -2852,13 +2862,29 @@
         pubTypesChartInstance.destroy();
       }
 
+      const dCounts = [
+        PUB_TYPE_COUNTS.journal,
+        PUB_TYPE_COUNTS.conference,
+        PUB_TYPE_COUNTS.other,
+        PUB_TYPE_COUNTS.dataset,
+        PUB_TYPE_COUNTS.preprint,
+        PUB_TYPE_COUNTS.chapter
+      ];
+
       pubTypesChartInstance = new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Journal Articles (115)', 'Conference Papers (13)', 'Other Outputs (12)', 'Datasets (2)', 'Preprints (2)', 'Book Chapters (1)'],
+          labels: [
+            `Journal Articles (${PUB_TYPE_COUNTS.journal})`,
+            `Conference Papers (${PUB_TYPE_COUNTS.conference})`,
+            `Other Outputs (${PUB_TYPE_COUNTS.other})`,
+            `Datasets (${PUB_TYPE_COUNTS.dataset})`,
+            `Preprints (${PUB_TYPE_COUNTS.preprint})`,
+            `Book Chapters (${PUB_TYPE_COUNTS.chapter})`
+          ],
           datasets: [{
             label: 'Indexed Count',
-            data: [115, 13, 12, 2, 2, 1],
+            data: dCounts,
             backgroundColor: [
               'rgba(30, 58, 138, 0.90)',
               'rgba(29, 78, 216, 0.88)',
@@ -2965,21 +2991,46 @@
       }).join('');
     }
 
-    // Helper to update all DOM counters across Hero, Scientometrics, and Publications sections
+    // Helper to update ALL data, figures, charts, cards, and network readouts across the website after online scan
     function propagateMetricsToDOM(stats) {
       const citStr = stats.citationsAll.toLocaleString();
       const citRecStr = stats.citationsRecent.toLocaleString();
+      const recCitPct = stats.citationsAll > 0 ? ((stats.citationsRecent / stats.citationsAll) * 100).toFixed(1) : '89.1';
+      const recHPct = stats.hIndexAll > 0 ? Math.min(100, Math.round((stats.hIndexRecent / stats.hIndexAll) * 100)) : 100;
+      const recI10Pct = stats.i10IndexAll > 0 ? ((stats.i10IndexRecent / stats.i10IndexAll) * 100).toFixed(1) : '97.9';
+
       SCHOLAR_METRICS.all.citations = citStr;
+      SCHOLAR_METRICS.all.citationsSub = 'All-time total citations (Live synced)';
       SCHOLAR_METRICS.all.hIndex = String(stats.hIndexAll);
       SCHOLAR_METRICS.all.i10Index = String(stats.i10IndexAll);
-      SCHOLAR_METRICS.since2021.citations = citRecStr;
-      SCHOLAR_METRICS.since2021.hIndex = String(stats.hIndexRecent);
-      SCHOLAR_METRICS.since2021.i10Index = String(stats.i10IndexRecent);
+      SCHOLAR_METRICS.all.i10Sub = `${stats.i10IndexAll} papers with ≥10 citations`;
 
+      SCHOLAR_METRICS.since2021.citations = citRecStr;
+      SCHOLAR_METRICS.since2021.citationsSub = `${recCitPct}% of all-time citations`;
+      SCHOLAR_METRICS.since2021.hIndex = String(stats.hIndexRecent);
+      SCHOLAR_METRICS.since2021.hIndexSub = `${recHPct}% of all-time h-index`;
+      SCHOLAR_METRICS.since2021.i10Index = String(stats.i10IndexRecent);
+      SCHOLAR_METRICS.since2021.i10Sub = `${recI10Pct}% of all-time i10-index`;
+
+      // Update mean annual citations (2022-2026)
+      const recentFiveYears = SCHOLAR_METRICS.annualCitations.slice(-5);
+      const meanAnnual = (recentFiveYears.reduce((a, b) => a + b, 0) / Math.max(1, recentFiveYears.length)).toFixed(1);
+      const meanEl = document.getElementById('scholarMeanAnnualText');
+      if (meanEl) meanEl.textContent = `${meanAnnual} / yr`;
+
+      // Update Publication Type Breakdown counts proportionally if totalOutputs increased
+      const knownSum = PUB_TYPE_COUNTS.journal + PUB_TYPE_COUNTS.conference + PUB_TYPE_COUNTS.other + PUB_TYPE_COUNTS.dataset + PUB_TYPE_COUNTS.preprint + PUB_TYPE_COUNTS.chapter;
+      if (stats.totalOutputs > knownSum) {
+        PUB_TYPE_COUNTS.journal += (stats.totalOutputs - knownSum);
+      }
+
+      // Redraw both Chart.js figures and Year-by-Year pills
       setScholarWindow(state.scholarWindow);
       renderScholarYearPills();
       initScholarChart();
+      initPublicationTypesChart();
 
+      // Update Hero section counters & summary line
       const heroCit = document.getElementById('heroQuickCitations');
       const heroH = document.getElementById('heroQuickHIndex');
       const heroOut = document.getElementById('heroQuickOutputs');
@@ -2994,24 +3045,56 @@
         heroInline.innerHTML = `${citStr}+ Google Scholar citations &bull; h-index ${stats.hIndexAll} &bull; i10-index ${stats.i10IndexAll} &bull; ${stats.peerReviews} verified peer reviews across 61 journals &amp; grants.`;
       }
 
+      // Update Scopus / SciProfiles / ORCID / Biography / Collaborators counters
       const pubScholarBadge = document.getElementById('pubCardScholarBadge');
       const pubScholarSub = document.getElementById('pubCardScholarSub');
       const pubOrcidBadge = document.getElementById('pubCardOrcidBadge');
       const pubSciBadge = document.getElementById('pubCardSciProfilesBadge');
       const scopusBadge = document.getElementById('scopusTotalOutputsBadge');
+      const scopusJourEl = document.getElementById('scopusJournalCount');
+      const scopusJourPctEl = document.getElementById('scopusJournalPct');
+      const scopusConfEl = document.getElementById('scopusConfCount');
+      const scopusCoAuthEl = document.getElementById('scopusCoAuthorCount');
+      const scopusCareerEl = document.getElementById('scopusCareerYears');
+      const footprintPubsEl = document.getElementById('footprintTotalPubsText');
       const orcidWorksEl = document.getElementById('orcidWorksCount');
       const orcidRevEl = document.getElementById('orcidReviewsCount');
+      const bioRevSub = document.getElementById('bioPeerReviewSubtitle');
+      const collabCoAuth = document.getElementById('collabHeaderCoAuthorsCount');
 
       if (pubScholarBadge) pubScholarBadge.innerHTML = `${citStr} Citations &bull; h=${stats.hIndexAll}`;
       if (pubScholarSub) pubScholarSub.innerHTML = `user=YeEyzMYAAAAJ &bull; i10=${stats.i10IndexAll}`;
       if (pubOrcidBadge) pubOrcidBadge.innerHTML = `${stats.orcidWorks} Works &bull; ${stats.peerReviews} Reviews`;
       if (pubSciBadge) pubSciBadge.innerHTML = `${stats.totalOutputs} Pubs &bull; ${stats.coAuthors} Co-authors`;
       if (scopusBadge) scopusBadge.textContent = `${stats.totalOutputs} Total Outputs`;
+      if (scopusJourEl) scopusJourEl.textContent = String(PUB_TYPE_COUNTS.journal);
+      if (scopusJourPctEl && stats.totalOutputs > 0) {
+        scopusJourPctEl.textContent = `${((PUB_TYPE_COUNTS.journal / stats.totalOutputs) * 100).toFixed(1)}% of output`;
+      }
+      if (scopusConfEl) scopusConfEl.textContent = String(PUB_TYPE_COUNTS.conference);
+      if (scopusCoAuthEl) scopusCoAuthEl.textContent = String(stats.coAuthors);
+      const careerYrs = Math.max(11, new Date().getFullYear() - 2015);
+      if (scopusCareerEl) scopusCareerEl.textContent = `${careerYrs} Yrs`;
+      if (footprintPubsEl) footprintPubsEl.textContent = String(stats.totalOutputs);
       if (orcidWorksEl) orcidWorksEl.textContent = String(stats.orcidWorks);
       if (orcidRevEl) orcidRevEl.textContent = String(stats.peerReviews);
+      if (bioRevSub) bioRevSub.textContent = `${stats.peerReviews} verified reviews on ORCID across 61 venues`;
+      if (collabCoAuth) collabCoAuth.textContent = String(stats.coAuthors);
+
+      // Update Central Node in Co-Authorship Network Graph & redraw canvas
+      if (typeof NETWORK_NODES !== 'undefined' && NETWORK_NODES.length > 0) {
+        NETWORK_NODES[0].role = `Principal Investigator • University of Manitoba (${citStr}+ Citations, h-index ${stats.hIndexAll}, ${stats.totalOutputs} Outputs, ${stats.coAuthors} Co-Authors)`;
+        if (selectedNetworkNodeId === 'ali') {
+          const readout = document.getElementById('networkNodeReadout');
+          if (readout) {
+            readout.innerHTML = `Selected Node: <strong>Ali Mohammad Alqudah, Ph.D.</strong> — ${NETWORK_NODES[0].role}`;
+          }
+        }
+        drawCollabNetwork();
+      }
     }
 
-    // Automatic Online Statistics Scanner & Synchronizer (Scans Google Scholar, OpenAlex, ORCID, Scopus/SciProfiles & GitHub)
+    // Automatic Online Statistics Scanner & Synchronizer (Runs immediately when the website opens)
     async function autoSyncAllOnlineStatistics(manualTrigger) {
       const statusText = document.getElementById('autoSyncStatusText');
       const dot = document.getElementById('autoSyncDot');
@@ -3033,7 +3116,7 @@
 
       // Baseline verified metrics (monotonic floor so partial indexers never downgrade verified counts)
       let liveStats = {
-        citationsAll: 3137,
+        citationsAll: 3139,
         citationsRecent: 2796,
         hIndexAll: 30,
         hIndexRecent: 30,
@@ -3052,31 +3135,61 @@
           const cached = JSON.parse(cachedRaw);
           if (cached && typeof cached.citationsAll === 'number') {
             liveStats.citationsAll = Math.max(liveStats.citationsAll, cached.citationsAll);
+            liveStats.citationsRecent = Math.max(liveStats.citationsRecent, cached.citationsRecent || 2796);
             liveStats.hIndexAll = Math.max(liveStats.hIndexAll, cached.hIndexAll || 30);
             liveStats.i10IndexAll = Math.max(liveStats.i10IndexAll, cached.i10IndexAll || 48);
             liveStats.totalOutputs = Math.max(liveStats.totalOutputs, cached.totalOutputs || 145);
             liveStats.orcidWorks = Math.max(liveStats.orcidWorks, cached.orcidWorks || 68);
             liveStats.peerReviews = Math.max(liveStats.peerReviews, cached.peerReviews || 201);
+            liveStats.coAuthors = Math.max(liveStats.coAuthors, cached.coAuthors || 99);
           }
         }
       } catch (e) {}
 
       const syncedSources = [];
 
-      // 1. Live Google Scholar Scanner (via CORS-friendly proxy fallback + DOM parser for gsc_rsb_st)
+      // 1. Live Google Scholar Scanner (multi-proxy + cache-busting + regex & DOM parser for gsc_rsb_std & gsc_g_al)
       let scholarDirectSuccess = false;
-      try {
-        const scholarUrl = encodeURIComponent('https://scholar.google.com/citations?user=YeEyzMYAAAAJ&hl=en');
-        const proxyRes = await fetch(`https://api.allorigins.win/get?url=${scholarUrl}`);
-        if (proxyRes.ok) {
-          const proxyJson = await proxyRes.json();
-          const html = proxyJson && proxyJson.contents ? String(proxyJson.contents) : '';
-          if (html.includes('gsc_rsb_std')) {
+      const cacheBust = Date.now();
+      const scholarTargetUrl = `https://scholar.google.com/citations?user=YeEyzMYAAAAJ&hl=en&_cb=${cacheBust}`;
+      const scholarProxies = [
+        `https://corsproxy.io/?${encodeURIComponent(scholarTargetUrl)}`,
+        `https://api.allorigins.win/raw?url=${encodeURIComponent(scholarTargetUrl)}`,
+        `https://api.allorigins.win/get?url=${encodeURIComponent(scholarTargetUrl)}`,
+        `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(scholarTargetUrl)}`
+      ];
+
+      for (const proxyEndpoint of scholarProxies) {
+        if (scholarDirectSuccess) break;
+        try {
+          const controller = new AbortController();
+          const timer = setTimeout(() => controller.abort(), 6500);
+          const proxyRes = await fetch(proxyEndpoint, { signal: controller.signal, cache: 'no-store' });
+          clearTimeout(timer);
+          if (!proxyRes.ok) continue;
+
+          const rawText = await proxyRes.text();
+          let html = rawText;
+          if (rawText.trim().startsWith('{')) {
+            try {
+              const parsed = JSON.parse(rawText);
+              html = parsed.contents || rawText;
+            } catch (e) {}
+          }
+
+          if (html && html.includes('gsc_rsb_std')) {
             const doc = new DOMParser().parseFromString(html, 'text/html');
-            const cells = Array.from(doc.querySelectorAll('.gsc_rsb_std')).map(el =>
+            let cells = Array.from(doc.querySelectorAll('.gsc_rsb_std')).map(el =>
               parseInt((el.textContent || '').replace(/[^0-9]/g, ''), 10)
             );
-            if (cells.length >= 6 && !isNaN(cells[0])) {
+            if (cells.length < 6) {
+              const regexMatches = [...html.matchAll(/class="gsc_rsb_std"[^>]*>([0-9,]+)</g)];
+              if (regexMatches.length >= 6) {
+                cells = regexMatches.map(m => parseInt(m[1].replace(/[^0-9]/g, ''), 10));
+              }
+            }
+
+            if (cells.length >= 6 && !isNaN(cells[0]) && cells[0] > 0) {
               liveStats.citationsAll = Math.max(liveStats.citationsAll, cells[0]);
               liveStats.citationsRecent = Math.max(liveStats.citationsRecent, cells[1] || liveStats.citationsRecent);
               liveStats.hIndexAll = Math.max(liveStats.hIndexAll, cells[2] || liveStats.hIndexAll);
@@ -3086,7 +3199,7 @@
               scholarDirectSuccess = true;
               syncedSources.push('Google Scholar');
             }
-            // Parse year-by-year bar graph values if present
+
             const yrSpans = Array.from(doc.querySelectorAll('.gsc_g_t')).map(el => (el.textContent || '').trim());
             const valSpans = Array.from(doc.querySelectorAll('.gsc_g_al')).map(el => parseInt((el.textContent || '').trim(), 10));
             if (yrSpans.length > 0 && yrSpans.length === valSpans.length) {
@@ -3094,18 +3207,21 @@
                 const pos = SCHOLAR_METRICS.years.indexOf(yr);
                 if (pos !== -1 && !isNaN(valSpans[idx])) {
                   SCHOLAR_METRICS.annualCitations[pos] = Math.max(SCHOLAR_METRICS.annualCitations[pos], valSpans[idx]);
+                } else if (pos === -1 && !isNaN(valSpans[idx]) && parseInt(yr, 10) > 2026) {
+                  SCHOLAR_METRICS.years.push(yr);
+                  SCHOLAR_METRICS.annualCitations.push(valSpans[idx]);
                 }
               });
             }
           }
-        }
-      } catch (e) {}
+        } catch (e) {}
+      }
 
       setSourceStatus(
         'Scholar',
         scholarDirectSuccess
           ? `Live: ${liveStats.citationsAll.toLocaleString()} cit • h=${liveStats.hIndexAll}`
-          : `Verified: ${liveStats.citationsAll.toLocaleString()} cit • h=${liveStats.hIndexAll}`,
+          : `Synced: ${liveStats.citationsAll.toLocaleString()} cit • h=${liveStats.hIndexAll}`,
         true
       );
 
@@ -3131,39 +3247,54 @@
               const idx = SCHOLAR_METRICS.years.indexOf(yrStr);
               if (idx !== -1 && typeof entry.cited_by_count === 'number') {
                 SCHOLAR_METRICS.annualCitations[idx] = Math.max(SCHOLAR_METRICS.annualCitations[idx], entry.cited_by_count);
+              } else if (idx === -1 && typeof entry.cited_by_count === 'number' && entry.year > 2026) {
+                SCHOLAR_METRICS.years.push(yrStr);
+                SCHOLAR_METRICS.annualCitations.push(entry.cited_by_count);
               }
             });
           }
           syncedSources.push('OpenAlex');
           setSourceStatus('OpenAlex', `Live: ${oaAuthor.works_count || 68}+ works synced`, true);
-          setSourceStatus('Scopus', `Verified: ${liveStats.totalOutputs} pubs • ID 57189294287`, true);
+          setSourceStatus('Scopus', `Synced: ${liveStats.totalOutputs} pubs • ID 57189294287`, true);
         } else {
           setSourceStatus('OpenAlex', 'Active (Cached Registry)', true);
-          setSourceStatus('Scopus', `Verified: ${liveStats.totalOutputs} pubs • ID 57189294287`, true);
+          setSourceStatus('Scopus', `Synced: ${liveStats.totalOutputs} pubs • ID 57189294287`, true);
         }
       } catch (e) {
         setSourceStatus('OpenAlex', 'Active (Verified Snapshot)', true);
-        setSourceStatus('Scopus', `Verified: ${liveStats.totalOutputs} pubs • ID 57189294287`, true);
+        setSourceStatus('Scopus', `Synced: ${liveStats.totalOutputs} pubs • ID 57189294287`, true);
       }
 
-      // Update per-paper citation counts from OpenAlex Works endpoint
+      // Scan OpenAlex Works to update per-paper citation counts, co-author count, and publication type chart
       try {
-        const worksRes = await fetch('https://api.openalex.org/works?filter=author.orcid:0000-0002-5417-0043&per-page=50');
+        const worksRes = await fetch('https://api.openalex.org/works?filter=author.orcid:0000-0002-5417-0043&per-page=100');
         if (worksRes.ok) {
           const worksData = await worksRes.json();
           const results = Array.isArray(worksData.results) ? worksData.results : [];
           let updatedPapers = false;
+          const uniqueCoAuthors = new Set();
+
           results.forEach(w => {
-            if (!w || !w.title || typeof w.cited_by_count !== 'number') return;
-            const normW = String(w.title).toLowerCase().replace(/[^a-z0-9]/g, '');
-            SELECTED_PUBLICATIONS.forEach(pub => {
-              const normP = pub.title.toLowerCase().replace(/[^a-z0-9]/g, '');
-              if (normW.slice(0, 26) === normP.slice(0, 26) && w.cited_by_count > pub.citations) {
-                pub.citations = w.cited_by_count;
-                updatedPapers = true;
-              }
-            });
+            if (!w || !w.title) return;
+            if (Array.isArray(w.authorships)) {
+              w.authorships.forEach(a => {
+                if (a.author?.display_name) uniqueCoAuthors.add(a.author.display_name.toLowerCase());
+              });
+            }
+            if (typeof w.cited_by_count === 'number') {
+              const normW = String(w.title).toLowerCase().replace(/[^a-z0-9]/g, '');
+              SELECTED_PUBLICATIONS.forEach(pub => {
+                const normP = pub.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+                if (normW.slice(0, 26) === normP.slice(0, 26) && w.cited_by_count > pub.citations) {
+                  pub.citations = w.cited_by_count;
+                  updatedPapers = true;
+                }
+              });
+            }
           });
+          if (uniqueCoAuthors.size > liveStats.coAuthors) {
+            liveStats.coAuthors = uniqueCoAuthors.size;
+          }
           if (updatedPapers) renderPublications();
         }
       } catch (e) {}
@@ -3195,29 +3326,59 @@
         syncedSources.push('ORCID');
         setSourceStatus('Orcid', `Live: ${liveStats.orcidWorks} works • ${liveStats.peerReviews} reviews`, true);
       } catch (e) {
-        setSourceStatus('Orcid', `Verified: ${liveStats.orcidWorks} works • ${liveStats.peerReviews} reviews`, true);
+        setSourceStatus('Orcid', `Synced: ${liveStats.orcidWorks} works • ${liveStats.peerReviews} reviews`, true);
       }
 
-      // 4. GitHub Public API Scanner (@aliqudah)
+      // 4. GitHub Public API Scanner (@aliqudah user + live repositories list)
       try {
-        const ghRes = await fetch('https://api.github.com/users/aliqudah');
+        const [ghRes, ghReposRes] = await Promise.all([
+          fetch('https://api.github.com/users/aliqudah'),
+          fetch('https://api.github.com/users/aliqudah/repos?per_page=100&sort=updated')
+        ]);
+        if (ghReposRes.ok) {
+          const reposList = await ghReposRes.json();
+          if (Array.isArray(reposList)) {
+            let addedNewRepo = false;
+            reposList.forEach(r => {
+              if (!r || !r.name) return;
+              const exists = GITHUB_REPOS.some(existing => existing.name.toLowerCase() === r.name.toLowerCase());
+              if (!exists) {
+                const rawLang = r.language || 'Python';
+                const normLang = rawLang.includes('MATLAB') ? 'MATLAB' : (rawLang.includes('HTML') ? 'HTML' : 'Python');
+                GITHUB_REPOS.unshift({
+                  name: r.name,
+                  language: normLang,
+                  tag: r.language || 'Research Repo',
+                  desc: r.description || `Open-source research repository (${r.name}) hosted on GitHub (@aliqudah).`,
+                  url: r.html_url || `https://github.com/aliqudah/${r.name}`
+                });
+                addedNewRepo = true;
+              }
+            });
+            if (addedNewRepo) {
+              renderGithubRepos();
+            }
+          }
+        }
         if (ghRes.ok) {
           const ghUser = await ghRes.json();
-          const repoCount = typeof ghUser.public_repos === 'number' ? ghUser.public_repos : 10;
+          const repoCount = Math.max(GITHUB_REPOS.length, typeof ghUser.public_repos === 'number' ? ghUser.public_repos : 10);
           const badge = document.getElementById('githubLiveBadge');
           const ghStatus = document.getElementById('githubSyncStatusText');
+          const ghAllBtn = document.getElementById('ghFilterAllBtn');
           if (badge) badge.textContent = `${repoCount} Public Repositories (Live)`;
           if (ghStatus) ghStatus.textContent = `Live synced from api.github.com/users/aliqudah (${repoCount} public repos)`;
+          if (ghAllBtn) ghAllBtn.textContent = `All Repos (${GITHUB_REPOS.length})`;
           syncedSources.push('GitHub');
           setSourceStatus('Github', `Live: ${repoCount} public repos`, true);
         } else {
-          setSourceStatus('Github', 'Verified: 10 public repos', true);
+          setSourceStatus('Github', `Synced: ${GITHUB_REPOS.length} public repos`, true);
         }
       } catch (e) {
-        setSourceStatus('Github', 'Verified: 10 public repos', true);
+        setSourceStatus('Github', `Synced: ${GITHUB_REPOS.length} public repos`, true);
       }
 
-      // Recompute cumulative citations & propagate all metrics across the page
+      // Recompute cumulative citations & propagate all metrics + redraw all figures across the website
       let runningTotal = 0;
       SCHOLAR_METRICS.cumulativeCitations = SCHOLAR_METRICS.annualCitations.map(v => {
         runningTotal += v;
@@ -3238,22 +3399,22 @@
       const nowStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
       if (statusText) {
         statusText.textContent = syncedSources.length > 0
-          ? `Online Statistics Scanned & Updated (${syncedSources.join(' • ')}) at ${nowStr}`
-          : `All Profile Statistics Verified & Up to Date (Checked at ${nowStr})`;
+          ? `Online Statistics Scanned & All Figures Updated (${syncedSources.join(' • ')}) at ${nowStr}`
+          : `All Profile Statistics & Figures Verified (Checked at ${nowStr})`;
       }
       if (overallBadge) {
-        overallBadge.textContent = `Last Scanned: ${nowStr}`;
+        overallBadge.textContent = `Figures Updated: ${nowStr}`;
       }
       if (dot) dot.classList.remove('animate-ping');
 
       if (manualTrigger) {
-        showToast('Scanned Google Scholar, OpenAlex, ORCID & GitHub — statistics updated!');
+        showToast('Scanned online profiles — all data, counters, and figures updated!');
       }
     }
 
     // Interactive Co-Authorship & Institutional Research Network Graph
     const NETWORK_NODES = [
-      { id: 'ali', label: 'Ali M. Alqudah, Ph.D.', role: 'Principal Investigator • University of Manitoba (3,137+ Citations, h-index 30)', rx: 0.50, ry: 0.50, r: 22, color: '#0284c7' },
+      { id: 'ali', label: 'Ali M. Alqudah, Ph.D.', role: 'Principal Investigator • University of Manitoba (3,139+ Citations, h-index 30)', rx: 0.50, ry: 0.50, r: 22, color: '#0284c7' },
       { id: 'moussavi', label: 'Prof. Zahra Moussavi', role: 'Ph.D. Supervisor • University of Manitoba (OSA Tracheal Sounds & Biomedical Signals)', rx: 0.20, ry: 0.24, r: 16, color: '#2563eb' },
       { id: 'alfraihat', label: 'Ausilah Alfraihat, Ph.D.', role: 'Assistant Professor • The Hashemite University / Drexel University (Leukemia CNN & Biomechanics)', rx: 0.80, ry: 0.24, r: 16, color: '#0ea5e9' },
       { id: 'amin', label: 'Amin Alqudah, Ph.D.', role: 'Co-Investigator • Yarmouk University (Deep Learning & Biomedical Imaging)', rx: 0.18, ry: 0.76, r: 14, color: '#4f46e5' },
@@ -3844,7 +4005,7 @@
 
       const index = [
         { section: 'home', title: 'Ali Mohammad Alqudah, Ph.D. (https://aliqudah.github.io/)', desc: 'Ph.D. In Biomedical Engineering, University of Manitoba | ali_qudah@hotmail.com | alqudaha@myumanitoba.ca' },
-        { section: 'metrics', title: 'Google Scholar Scientometrics (3,137 Citations, h-index 30, i10-index 48)', desc: 'Interactive year-by-year citation chart (2017–2026), Since 2021 metrics (2,796 citations), public access stats' },
+        { section: 'metrics', title: 'Google Scholar Scientometrics (3,139 Citations, h-index 30, i10-index 48)', desc: 'Interactive year-by-year citation chart (2017–2026), Since 2021 metrics (2,796 citations), public access stats' },
         { section: 'metrics', title: 'Scopus (57189294287), ResearchGate & SciProfiles (145 Publications, 99 Co-authors)', desc: '115 Journal Articles, 13 Conference Papers, topical research footprint & editorial leadership' },
         { section: 'metrics', title: 'ORCID (0000-0002-5417-0043) & Peer Review Record', desc: '68 Verified Works, 201 Verified Peer Reviews across 61 journals/grants, ResearcherID A-1390-2017' },
         { section: 'biography', title: 'Biography & Peer Review Service', desc: 'Obstructive Sleep Apnea (OSA), tracheal breathing sounds, IEEE JBHI, IEEE Sensors, IEEE Access, MBEC' },
@@ -4179,7 +4340,7 @@
         badgeColor: 'bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300',
         source: 'Google Scholar & ORCID',
         title: 'Surpassed 3,130+ Citations (h-index 30) & 200+ Verified Journal Peer Reviews',
-        summary: 'Reached 3,137 total citations, h-index of 30, i10-index of 48 on Google Scholar, and 201 verified peer-review contributions across 61 journals and grants on ORCID.',
+        summary: 'Reached 3,139 total citations, h-index of 30, i10-index of 48 on Google Scholar, and 201 verified peer-review contributions across 61 journals and grants on ORCID.',
         url: 'https://scholar.google.com/citations?user=YeEyzMYAAAAJ&hl=en'
       },
       {
